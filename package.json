@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "d3": "^5.9.1",
     "eslint-config-airbnb": "^17.1.0",
     "immutable": "^4.0.0-rc.12",
+    "prop-types": "^15.7.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-redux": "^6.0.1",
+    "react-router": "^4.3.1",
     "react-scripts": "2.1.5",
     "redux": "^4.0.1",
     "redux-actions": "^2.6.5",
@@ -29,7 +32,8 @@
       "react/jsx-filename-extension": 0,
       "react/jsx-one-expression-per-line": 0,
       "react/button-has-type": 0,
-      "arrow-body-style": 0
+      "arrow-body-style": 0,
+      "linebreak-style": 0
     }
   },
   "browserslist": [
