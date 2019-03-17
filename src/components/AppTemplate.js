@@ -2,18 +2,16 @@ import React from 'react';
 import './AppTemplate.css';
 import PropTypes from 'prop-types';
 
-const AppTemplate = ({ testdata, counter }) => {
+const AppTemplate = ({ testFrame2 }) => {
   return (
     <div className="app-template">
-      <div className="counter">{counter}</div>
-      <div className="countertemp">{testdata}</div>
+      <div className="testFrame2">{testFrame2}</div>
     </div>
   );
 };
 
 AppTemplate.propTypes = {
-  counter: PropTypes.objectOf.isRequired,
-  testdata: PropTypes.objectOf.isRequired,
+  testFrame2: PropTypes.object.isRequired,
 };
 
 export default AppTemplate;

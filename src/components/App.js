@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import CounterContainer from '../containers/CounterContatiner';
 import AppTemplate from './AppTemplate';
+
+// import CounterContainer from '../containers/CounterContatiner';
 import TestDataFromDB from './TestDataFromDB';
+import PicWorldMap from './PicWorldMap';
 
 class App extends Component {
   render() {
     return (
       <AppTemplate
-        testdata={<TestDataFromDB />}
-        counter={<CounterContainer />}
+        testFrame1={<TestDataFromDB />}
+        testFrame2={<PicWorldMap />}
       />
     );
   }

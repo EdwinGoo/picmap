@@ -1,13 +1,12 @@
 .app-template {
-  padding: 5%;
 }
 
-.countertemp {
+.testFrame1 {
   float: left;
   width: 50%;
 }
 
-.counter {
+.testFrame2 {
   float: left;
   width: 50%;
 }
