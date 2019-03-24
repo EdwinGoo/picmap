@@ -21,12 +21,12 @@ export class PicWolrdMap extends Component {
           xmlnsXlink="http://www.w3.org/1999/xlink"
           width="100%"
           height="auto"
-          viewBox="0 0 1920 1080"
+          viewBox="0 0 1920 1000"
           xmlSpace="preserve"
         >
           {/* <path d="M.5.5h1919v1080H.5z" fill="#0070C6" fillOpacity={1} /> */}
           <g
-            transform="translate(320,400) scale(0.9)"
+            transform="translate(250,400) scale(1)"
             onClick={this.clicktest}
             fill="#ffffff"
             fillOpacity={1}
