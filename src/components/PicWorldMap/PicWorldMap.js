@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './PicWorldMap.css';
 
 export class PicWolrdMap extends Component {
   clicktest = e => {
@@ -14,19 +15,18 @@ export class PicWolrdMap extends Component {
 
   render() {
     return (
-      <div>
+      <div className="map">
         <svg
-          className="map"
           version="1.1"
           xmlnsXlink="http://www.w3.org/1999/xlink"
           width="100%"
           height="auto"
-          viewBox="0 0 1920 960"
+          viewBox="0 0 1920 1080"
           xmlSpace="preserve"
         >
-          <path d="M.5.5h1919v943H.5z" fill="#0070C6" fillOpacity={1} />
+          {/* <path d="M.5.5h1919v1080H.5z" fill="#0070C6" fillOpacity={1} /> */}
           <g
-            transform="translate(228,333) scale(1)"
+            transform="translate(320,400) scale(0.9)"
             onClick={this.clicktest}
             fill="#ffffff"
             fillOpacity={1}
