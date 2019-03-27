@@ -1,11 +1,14 @@
+/* eslint-disable operator-linebreak */
+/* eslint-disable arrow-parens */
 import React, { Component } from 'react';
 import './PicWorldMap.css';
+// import { Button, Popup } from 'semantic-ui-react';
 
 export class PicWolrdMap extends Component {
   clicktest = e => {
     const pixel = e.target;
     pixel.setAttribute('fill', '#FFC700');
-    console.log(e.target.getAttribute('aria-label'));
+    console.log(e.target.getAttribute('transform'));
   };
 
   dclick = e => {
@@ -14,1789 +17,1783 @@ export class PicWolrdMap extends Component {
   };
 
   render() {
+    const star =
+      'M 13.7962 5.10434 l -3.91405 -0.0601395 l -1.55804 -4.18443 c -0.300381 -0.772334 -1.34866 -0.772334 -1.64754 0 l -1.55804 4.18443 l -3.91405 0.0601395 c -0.810118 0.049077 -1.13932 1.111 -0.511254 1.64434 l 3.17372 2.87087 l -1.08167 3.92015 c -0.21239 0.805537 0.623517 1.47024 1.31227 1.04293 l 3.4028 -1.94187 l 3.4028 1.94031 c 0.688752 0.427307 1.52466 -0.237393 1.31227 -1.04295 l -1.08167 -3.92015 l 3.17372 -2.87086 C 14.9355 6.21378 14.6063 5.15182 13.7962 5.10434 Z';
     return (
       <div className="map">
-        <svg
-          version="1.1"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-          width="100%"
-          height="auto"
-          viewBox="0 0 1920 1000"
-          xmlSpace="preserve"
-        >
-          {/* <path d="M.5.5h1919v1080H.5z" fill="#0070C6" fillOpacity={1} /> */}
+        <svg version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" width="100%" height="auto" viewBox="0 0 1920 1000" xmlSpace="preserve">
           <g
-            transform="translate(250,400) scale(1)"
+            transform="translate(240,40) scale(1)"
             onClick={this.clicktest}
+            onDoubleClick={this.dclick}
             fill="#ffffff"
             fillOpacity={1}
+            stroke="#6d6d6d"
             strokeOpacity={0.1} // default : value 1 , value :[0-1] | <percentage>
-            stroke="#3399FF"
-            cursor="pointer"
           >
-            <path d="M532.1-309.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M548.096-309.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M564.092-309.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M580.087-309.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M516.09-293.034h15v-15h-15z" aria-label="Greenland " />
-            <path d="M532.1-293.034h15v-15h-15z" aria-label="Greenland " />
-            <path d="M548.096-293.034h15v-15h-15z" aria-label="Greenland " />
-            <path d="M564.092-293.034h15v-15h-15z" aria-label="Greenland " />
-            <path d="M580.087-293.034h15v-15h-15z" aria-label="Greenland " />
-            <path d="M596.098-293.034h15v-15h-15z" aria-label="Greenland " />
-            <path d="M484.098-277.024h15v-15h-15z" aria-label="Greenland " />
-            <path d="M500.094-277.024h15v-15h-15z" aria-label="Greenland " />
-            <path d="M516.09-277.024h15v-15h-15z" aria-label="Greenland " />
-            <path d="M532.1-277.024h15v-15h-15z" aria-label="Greenland " />
-            <path d="M548.096-277.024h15v-15h-15z" aria-label="Greenland " />
-            <path d="M452.092-261.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M468.088-261.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M484.098-261.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M500.094-261.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M516.09-261.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M532.1-261.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M548.096-261.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M564.092-261.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M580.087-261.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M612.094-261.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M628.09-261.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M436.096-245.032h15v-15h-15z" aria-label="Greenland " />
-            <path d="M452.092-245.032h15v-15h-15z" aria-label="Greenland " />
-            <path d="M468.088-245.032h15v-15h-15z" aria-label="Greenland " />
-            <path d="M484.098-245.032h15v-15h-15z" aria-label="Greenland " />
-            <path d="M500.094-245.032h15v-15h-15z" aria-label="Greenland " />
-            <path d="M516.09-245.032h15v-15h-15z" aria-label="Greenland " />
-            <path d="M532.1-245.032h15v-15h-15z" aria-label="Greenland " />
-            <path d="M548.096-245.032h15v-15h-15z" aria-label="Greenland " />
-            <path d="M564.092-245.032h15v-15h-15z" aria-label="Greenland " />
-            <path d="M580.087-245.032h15v-15h-15z" aria-label="Greenland " />
-            <path d="M596.098-245.032h15v-15h-15z" aria-label="Greenland " />
-            <path d="M612.094-245.032h15v-15h-15z" aria-label="Greenland " />
-            <path d="M452.092-229.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M468.088-229.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M484.098-229.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M500.094-229.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M516.09-229.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M532.1-229.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M548.096-229.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M564.092-229.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M580.087-229.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M596.098-229.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M612.094-229.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M756.1-229.022h15v-15h-15z" aria-label="Svalbard and Jan Mayen " />
-            <path d="M772.095-229.022h15v-15h-15z" aria-label="Svalbard and Jan Mayen " />
-            <path d="M452.092-213.026h15v-15h-15z" aria-label="Greenland " />
-            <path d="M468.088-213.026h15v-15h-15z" aria-label="Greenland " />
-            <path d="M484.098-213.026h15v-15h-15z" aria-label="Greenland " />
-            <path d="M500.094-213.026h15v-15h-15z" aria-label="Greenland " />
-            <path d="M516.09-213.026h15v-15h-15z" aria-label="Greenland " />
-            <path d="M532.1-213.026h15v-15h-15z" aria-label="Greenland " />
-            <path d="M548.096-213.026h15v-15h-15z" aria-label="Greenland " />
-            <path d="M564.092-213.026h15v-15h-15z" aria-label="Greenland " />
-            <path d="M580.087-213.026h15v-15h-15z" aria-label="Greenland " />
-            <path d="M596.098-213.026h15v-15h-15z" aria-label="Greenland " />
-            <path d="M756.1-213.026h15v-15h-15z" aria-label="Svalbard and Jan Mayen " />
-            <path d="M772.095-213.026h15v-15h-15z" aria-label="Svalbard and Jan Mayen " />
-            <path d="M788.09-213.026h15v-15h-15z" aria-label="Svalbard and Jan Mayen " />
-            <path d="M436.096-197.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M452.092-197.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M468.088-197.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M484.098-197.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M500.094-197.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M516.09-197.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M532.1-197.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M548.096-197.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M564.092-197.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M580.087-197.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M596.098-197.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M740.089-197.03h15v-15h-15z" aria-label="Svalbard and Jan Mayen " />
-            <path d="M756.1-197.03h15v-15h-15z" aria-label="Svalbard and Jan Mayen " />
-            <path d="M420.086-181.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M436.096-181.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M452.092-181.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M468.088-181.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M484.098-181.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M500.094-181.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M516.09-181.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M532.1-181.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M548.096-181.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M564.092-181.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M580.087-181.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M596.098-181.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M740.089-181.035h15v-15h-15z" aria-label="Svalbard and Jan Mayen " />
-            <path d="M756.1-181.035h15v-15h-15z" aria-label="Svalbard and Jan Mayen " />
-            <path d="M772.095-181.035h15v-15h-15z" aria-label="Svalbard and Jan Mayen " />
-            <path d="M452.092-165.024h15v-15h-15z" aria-label="Greenland " />
-            <path d="M468.088-165.024h15v-15h-15z" aria-label="Greenland " />
-            <path d="M484.098-165.024h15v-15h-15z" aria-label="Greenland " />
-            <path d="M500.094-165.024h15v-15h-15z" aria-label="Greenland " />
-            <path d="M516.09-165.024h15v-15h-15z" aria-label="Greenland " />
-            <path d="M532.1-165.024h15v-15h-15z" aria-label="Greenland " />
-            <path d="M548.096-165.024h15v-15h-15z" aria-label="Greenland " />
-            <path d="M564.092-165.024h15v-15h-15z" aria-label="Greenland " />
-            <path d="M580.087-165.024h15v-15h-15z" aria-label="Greenland " />
-            <path d="M596.098-165.024h15v-15h-15z" aria-label="Greenland " />
-            <path d="M740.089-165.024h15v-15h-15z" aria-label="Svalbard and Jan Mayen " />
-            <path d="M436.096-149.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M452.092-149.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M468.088-149.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M484.098-149.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M500.094-149.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M516.09-149.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M532.1-149.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M548.096-149.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M564.092-149.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M580.087-149.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M596.098-149.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M484.098-133.033h15v-15h-15z" aria-label="Greenland " />
-            <path d="M500.094-133.033h15v-15h-15z" aria-label="Greenland " />
-            <path d="M516.09-133.033h15v-15h-15z" aria-label="Greenland " />
-            <path d="M532.1-133.033h15v-15h-15z" aria-label="Greenland " />
-            <path d="M548.096-133.033h15v-15h-15z" aria-label="Greenland " />
-            <path d="M564.092-133.033h15v-15h-15z" aria-label="Greenland " />
-            <path d="M580.087-133.033h15v-15h-15z" aria-label="Greenland " />
-            <path d="M596.098-133.033h15v-15h-15z" aria-label="Greenland " />
-            <path d="M484.098-117.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M500.094-117.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M516.09-117.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M532.1-117.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M548.096-117.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M564.092-117.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M580.087-117.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M596.098-117.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M500.094-101.027h15v-15h-15z" aria-label="Greenland " />
-            <path d="M516.09-101.027h15v-15h-15z" aria-label="Greenland " />
-            <path d="M532.1-101.027h15v-15h-15z" aria-label="Greenland " />
-            <path d="M548.096-101.027h15v-15h-15z" aria-label="Greenland " />
-            <path d="M564.092-101.027h15v-15h-15z" aria-label="Greenland " />
-            <path d="M580.087-101.027h15v-15h-15z" aria-label="Greenland " />
-            <path d="M596.098-101.027h15v-15h-15z" aria-label="Greenland " />
-            <path d="M500.094-85.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M516.09-85.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M532.1-85.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M548.096-85.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M564.092-85.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M580.087-85.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M500.094-69.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M516.09-69.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M532.1-69.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M548.096-69.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M564.092-69.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M788.09-69.035h15v-15h-15z" aria-label="Norway " />
-            <path d="M500.094-53.025h15v-15h-15z" aria-label="Greenland " />
-            <path d="M516.09-53.025h15v-15h-15z" aria-label="Greenland " />
-            <path d="M532.1-53.025h15v-15h-15z" aria-label="Greenland " />
-            <path d="M548.096-53.025h15v-15h-15z" aria-label="Greenland " />
-            <path d="M564.092-53.025h15v-15h-15z" aria-label="Greenland " />
-            <path d="M580.087-53.025h15v-15h-15z" aria-label="Greenland " />
-            <path d="M772.095-53.025h15v-15h-15z" aria-label="Norway " />
-            <path d="M788.09-53.025h15v-15h-15z" aria-label="Norway " />
-            <path d="M804.086-53.025h15v-15h-15z" aria-label="Norway " />
-            <path d="M500.094-37.029h15v-15h-15z" aria-label="Greenland " />
-            <path d="M516.09-37.029h15v-15h-15z" aria-label="Greenland " />
-            <path d="M532.1-37.029h15v-15h-15z" aria-label="Greenland " />
-            <path d="M548.096-37.029h15v-15h-15z" aria-label="Greenland " />
-            <path d="M564.092-37.029h15v-15h-15z" aria-label="Greenland " />
-            <path d="M756.1-37.029h15v-15h-15z" aria-label="Sweden " />
-            <path d="M772.095-37.029h15v-15h-15z" aria-label="Sweden " />
-            <path d="M788.09-37.029h15v-15h-15z" aria-label="Finland " />
-            <path d="M500.094-21.033h15v-15h-15z" aria-label="Greenland " />
-            <path d="M516.09-21.033h15v-15h-15z" aria-label="Greenland " />
-            <path d="M532.1-21.033h15v-15h-15z" aria-label="Greenland " />
-            <path d="M740.089-21.033h15v-15h-15z" aria-label="Norway " />
-            <path d="M756.1-21.033h15v-15h-15z" aria-label="Sweden " />
-            <path d="M772.095-21.033h15v-15h-15z" aria-label="Sweden " />
-            <path d="M788.09-21.033h15v-15h-15z" aria-label="Finland " />
-            <path d="M516.09-5.023h15v-15h-15z" aria-label="Greenland " />
-            <path d="M596.098-5.023h15v-15h-15z" aria-label="Iceland " />
-            <path d="M612.094-5.023h15v-15h-15z" aria-label="Iceland " />
-            <path d="M740.089-5.023h15v-15h-15z" aria-label="Sweden " />
-            <path d="M756.1-5.023h15v-15h-15z" aria-label="Sweden " />
-            <path d="M788.09-5.023h15v-15h-15z" aria-label="Finland " />
-            <path d="M724.093 10.973h15v-15h-15z" aria-label="Norway " />
-            <path d="M740.089 10.973h15v-15h-15z" aria-label="Sweden " />
-            <path d="M756.1 10.973h15v-15h-15z" aria-label="Sweden " />
-            <path d="M772.095 10.973h15v-15h-15z" aria-label="Finland " />
-            <path d="M788.09 10.973h15v-15h-15z" aria-label="Finland " />
-            <path d="M708.097 26.969h15v-15h-15z" aria-label="Norway " />
-            <path d="M724.093 26.969h15v-15h-15z" aria-label="Norway " />
-            <path d="M740.089 26.969h15v-15h-15z" aria-label="Sweden " />
-            <path d="M772.095 26.969h15v-15h-15z" aria-label="Finland " />
-            <path d="M788.09 26.969h15v-15h-15z" aria-label="Finland " />
-            <path d="M740.089 42.979h15v-15h-15z" aria-label="Sweden " />
-            <path d="M756.1 42.979h15v-15h-15z" aria-label="Sweden " />
-            <path d="M740.089 58.975h15v-15h-15z" aria-label="Sweden " />
-            <path d="M788.09 58.975h15v-15h-15z" aria-label="Latvia " />
-            <path d="M772.095 74.97h15v-15h-15z" aria-label="Lithuania " />
-            <path d="M788.09 74.97h15v-15h-15z" aria-label="Lithuania " />
-            <path d="M804.086 74.97h15v-15h-15z" aria-label="Belarus " />
-            <path d="M708.097 90.966h15v-15h-15z" aria-label="Netherlands " />
-            <path d="M724.093 90.966h15v-15h-15z" aria-label="Germany " />
-            <path d="M740.089 90.966h15v-15h-15z" aria-label="Poland " />
-            <path d="M756.1 90.966h15v-15h-15z" aria-label="Poland " />
-            <path d="M772.095 90.966h15v-15h-15z" aria-label="Poland " />
-            <path d="M788.09 90.966h15v-15h-15z" aria-label="Belarus " />
-            <path d="M804.086 90.966h15v-15h-15z" aria-label="Belarus " />
-            <path d="M964.088 90.966h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M980.098 90.966h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M996.094 90.966h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M708.097 106.977h15v-15h-15z" aria-label="Germany " />
-            <path d="M724.093 106.977h15v-15h-15z" aria-label="Germany " />
-            <path d="M740.089 106.977h15v-15h-15z" aria-label="Germany " />
-            <path d="M756.1 106.977h15v-15h-15z" aria-label="Poland " />
-            <path d="M772.095 106.977h15v-15h-15z" aria-label="Poland " />
-            <path d="M788.09 106.977h15v-15h-15z" aria-label="Ukraine " />
-            <path d="M804.086 106.977h15v-15h-15z" aria-label="Ukraine " />
-            <path d="M820.097 106.977h15v-15h-15z" aria-label="Ukraine " />
-            <path d="M900.09 106.977h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M916.086 106.977h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M964.088 106.977h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M980.098 106.977h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M996.094 106.977h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M1012.09 106.977h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M708.097 122.972h15v-15h-15z" aria-label="France " />
-            <path d="M724.093 122.972h15v-15h-15z" aria-label="Germany " />
-            <path d="M740.089 122.972h15v-15h-15z" aria-label="Austria " />
-            <path d="M756.1 122.972h15v-15h-15z" aria-label="Slovakia " />
-            <path d="M772.095 122.972h15v-15h-15z" aria-label="Ukraine " />
-            <path d="M788.09 122.972h15v-15h-15z" aria-label="Ukraine " />
-            <path d="M804.086 122.972h15v-15h-15z" aria-label="Ukraine " />
-            <path d="M820.097 122.972h15v-15h-15z" aria-label="Ukraine " />
-            <path d="M836.093 122.972h15v-15h-15z" aria-label="Ukraine " />
-            <path d="M900.09 122.972h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M916.086 122.972h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M932.096 122.972h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M948.092 122.972h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M964.088 122.972h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M980.098 122.972h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M996.094 122.972h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M1012.09 122.972h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M1028.1 122.972h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M1044.096 122.972h15v-15h-15z" aria-label="Mongolia " />
-            <path d="M1060.092 122.972h15v-15h-15z" aria-label="Mongolia " />
-            <path d="M1076.087 122.972h15v-15h-15z" aria-label="Mongolia " />
-            <path d="M1092.098 122.972h15v-15h-15z" aria-label="Mongolia " />
-            <path d="M1108.093 122.972h15v-15h-15z" aria-label="Mongolia " />
-            <path d="M1124.09 122.972h15v-15h-15z" aria-label="Mongolia " />
-            <path d="M1140.1 122.972h15v-15h-15z" aria-label="Mongolia " />
-            <path d="M724.093 138.968h15v-15h-15z" aria-label="Italy " />
-            <path d="M740.089 138.968h15v-15h-15z" aria-label="Slovenia " />
-            <path d="M756.1 138.968h15v-15h-15z" aria-label="Croatia " />
-            <path d="M772.095 138.968h15v-15h-15z" aria-label="Romania " />
-            <path d="M788.09 138.968h15v-15h-15z" aria-label="Romania " />
-            <path d="M804.086 138.968h15v-15h-15z" aria-label="Ukraine " />
-            <path d="M820.097 138.968h15v-15h-15z" aria-label="Ukraine " />
-            <path d="M916.086 138.968h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M932.096 138.968h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M948.092 138.968h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M964.088 138.968h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M980.098 138.968h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M996.094 138.968h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M1012.09 138.968h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M1076.087 138.968h15v-15h-15z" aria-label="Mongolia " />
-            <path d="M1092.098 138.968h15v-15h-15z" aria-label="Mongolia " />
-            <path d="M1108.093 138.968h15v-15h-15z" aria-label="Mongolia " />
-            <path d="M1124.09 138.968h15v-15h-15z" aria-label="Mongolia " />
-            <path d="M1140.1 138.968h15v-15h-15z" aria-label="Mongolia " />
-            <path d="M660.095 154.979h15v-15h-15z" aria-label="Spain " />
-            <path d="M676.091 154.979h15v-15h-15z" aria-label="Spain " />
-            <path d="M692.087 154.979h15v-15h-15z" aria-label="France " />
-            <path d="M740.089 154.979h15v-15h-15z" aria-label="Italy " />
-            <path d="M756.1 154.979h15v-15h-15z" aria-label="Croatia " />
-            <path d="M772.095 154.979h15v-15h-15z" aria-label="Serbia " />
-            <path d="M788.09 154.979h15v-15h-15z" aria-label="Bulgaria " />
-            <path d="M852.088 154.979h15v-15h-15z" aria-label="Georgia " />
-            <path d="M916.086 154.979h15v-15h-15z" aria-label="Uzbekistan " />
-            <path d="M932.096 154.979h15v-15h-15z" aria-label="Uzbekistan " />
-            <path d="M948.092 154.979h15v-15h-15z" aria-label="Uzbekistan " />
-            <path d="M964.088 154.979h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M980.098 154.979h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M996.094 154.979h15v-15h-15z" aria-label="Kyrgyzstan " />
-            <path d="M1092.098 154.979h15v-15h-15z" aria-label="Mongolia " />
-            <path d="M1108.093 154.979h15v-15h-15z" aria-label="Mongolia " />
-            <path d="M1124.09 154.979h15v-15h-15z" aria-label="Mongolia " />
-            <path d="M676.091 170.974h15v-15h-15z" aria-label="Spain " />
-            <path d="M756.1 170.974h15v-15h-15z" aria-label="Italy " />
-            <path d="M772.095 170.974h15v-15h-15z" aria-label="Greece " />
-            <path d="M804.086 170.974h15v-15h-15z" aria-label="Turkey " />
-            <path d="M820.097 170.974h15v-15h-15z" aria-label="Turkey " />
-            <path d="M836.093 170.974h15v-15h-15z" aria-label="Turkey " />
-            <path d="M852.088 170.974h15v-15h-15z" aria-label="Turkey " />
-            <path d="M868.099 170.974h15v-15h-15z" aria-label="Azerbaijan " />
-            <path d="M884.094 170.974h15v-15h-15z" aria-label="Azerbaijan " />
-            <path d="M900.09 170.974h15v-15h-15z" aria-label="Turkmenistan " />
-            <path d="M916.086 170.974h15v-15h-15z" aria-label="Turkmenistan " />
-            <path d="M932.096 170.974h15v-15h-15z" aria-label="Turkmenistan " />
-            <path d="M948.092 170.974h15v-15h-15z" aria-label="Uzbekistan " />
-            <path d="M964.088 170.974h15v-15h-15z" aria-label="Tajikistan " />
-            <path d="M980.098 170.974h15v-15h-15z" aria-label="Kyrgyzstan " />
-            <path d="M692.087 186.97h15v-15h-15z" aria-label="Algeria " />
-            <path d="M708.097 186.97h15v-15h-15z" aria-label="Algeria " />
-            <path d="M724.093 186.97h15v-15h-15z" aria-label="Tunisia " />
-            <path d="M772.095 186.97h15v-15h-15z" aria-label="Greece " />
-            <path d="M804.086 186.97h15v-15h-15z" aria-label="Turkey " />
-            <path d="M820.097 186.97h15v-15h-15z" aria-label="Turkey " />
-            <path d="M836.093 186.97h15v-15h-15z" aria-label="Turkey " />
-            <path d="M852.088 186.97h15v-15h-15z" aria-label="Syria " />
-            <path d="M868.099 186.97h15v-15h-15z" aria-label="Iran " />
-            <path d="M884.094 186.97h15v-15h-15z" aria-label="Iran " />
-            <path d="M900.09 186.97h15v-15h-15z" aria-label="Iran " />
-            <path d="M916.086 186.97h15v-15h-15z" aria-label="Iran " />
-            <path d="M932.096 186.97h15v-15h-15z" aria-label="Turkmenistan " />
-            <path d="M948.092 186.97h15v-15h-15z" aria-label="Afghanistan " />
-            <path d="M964.088 186.97h15v-15h-15z" aria-label="Afghanistan " />
-            <path d="M980.098 186.97h15v-15h-15z" aria-label="Pakistan " />
-            <path d="M676.091 202.966h15v-15h-15z" aria-label="Morocco " />
-            <path d="M692.087 202.966h15v-15h-15z" aria-label="Algeria " />
-            <path d="M708.097 202.966h15v-15h-15z" aria-label="Algeria " />
-            <path d="M724.093 202.966h15v-15h-15z" aria-label="Tunisia " />
-            <path d="M836.093 202.966h15v-15h-15z" aria-label="Syria " />
-            <path d="M852.088 202.966h15v-15h-15z" aria-label="Iraq " />
-            <path d="M868.099 202.966h15v-15h-15z" aria-label="Iran " />
-            <path d="M884.094 202.966h15v-15h-15z" aria-label="Iran " />
-            <path d="M900.09 202.966h15v-15h-15z" aria-label="Iran " />
-            <path d="M916.086 202.966h15v-15h-15z" aria-label="Iran " />
-            <path d="M932.096 202.966h15v-15h-15z" aria-label="Afghanistan " />
-            <path d="M948.092 202.966h15v-15h-15z" aria-label="Afghanistan " />
-            <path d="M964.088 202.966h15v-15h-15z" aria-label="Afghanistan " />
-            <path d="M980.098 202.966h15v-15h-15z" aria-label="Pakistan " />
-            <path d="M228.093 218.976h15v-15h-15z" aria-label="Mexico " />
-            <path d="M244.089 218.976h15v-15h-15z" aria-label="Mexico " />
-            <path d="M660.095 218.976h15v-15h-15z" aria-label="Morocco " />
-            <path d="M676.091 218.976h15v-15h-15z" aria-label="Algeria " />
-            <path d="M692.087 218.976h15v-15h-15z" aria-label="Algeria " />
-            <path d="M708.097 218.976h15v-15h-15z" aria-label="Algeria " />
-            <path d="M804.086 218.976h15v-15h-15z" aria-label="Egypt " />
-            <path d="M820.097 218.976h15v-15h-15z" aria-label="Egypt " />
-            <path d="M836.093 218.976h15v-15h-15z" aria-label="Saudi Arabia " />
-            <path d="M852.088 218.976h15v-15h-15z" aria-label="Saudi Arabia " />
-            <path d="M868.099 218.976h15v-15h-15z" aria-label="Iraq " />
-            <path d="M884.094 218.976h15v-15h-15z" aria-label="Iran " />
-            <path d="M900.09 218.976h15v-15h-15z" aria-label="Iran " />
-            <path d="M916.086 218.976h15v-15h-15z" aria-label="Iran " />
-            <path d="M932.096 218.976h15v-15h-15z" aria-label="Afghanistan " />
-            <path d="M948.092 218.976h15v-15h-15z" aria-label="Afghanistan " />
-            <path d="M964.088 218.976h15v-15h-15z" aria-label="Pakistan " />
-            <path d="M980.098 218.976h15v-15h-15z" aria-label="Pakistan " />
-            <path d="M244.089 234.972h15v-15h-15z" aria-label="Mexico " />
-            <path d="M260.1 234.972h15v-15h-15z" aria-label="Mexico " />
-            <path d="M276.095 234.972h15v-15h-15z" aria-label="Mexico " />
-            <path d="M644.1 234.972h15v-15h-15z" aria-label="Western Sahara " />
-            <path d="M660.095 234.972h15v-15h-15z" aria-label="Algeria " />
-            <path d="M676.091 234.972h15v-15h-15z" aria-label="Algeria " />
-            <path d="M692.087 234.972h15v-15h-15z" aria-label="Algeria " />
-            <path d="M708.097 234.972h15v-15h-15z" aria-label="Algeria " />
-            <path d="M804.086 234.972h15v-15h-15z" aria-label="Egypt " />
-            <path d="M820.097 234.972h15v-15h-15z" aria-label="Egypt " />
-            <path d="M836.093 234.972h15v-15h-15z" aria-label="Saudi Arabia " />
-            <path d="M852.088 234.972h15v-15h-15z" aria-label="Saudi Arabia " />
-            <path d="M868.099 234.972h15v-15h-15z" aria-label="Saudi Arabia " />
-            <path d="M884.094 234.972h15v-15h-15z" aria-label="Saudi Arabia " />
-            <path d="M900.09 234.972h15v-15h-15z" aria-label="Iran " />
-            <path d="M916.086 234.972h15v-15h-15z" aria-label="Iran " />
-            <path d="M932.096 234.972h15v-15h-15z" aria-label="Iran " />
-            <path d="M948.092 234.972h15v-15h-15z" aria-label="Pakistan " />
-            <path d="M964.088 234.972h15v-15h-15z" aria-label="Pakistan " />
-            <path d="M356.088 250.968h15v-15h-15z" aria-label="Cuba " />
-            <path d="M628.09 250.968h15v-15h-15z" aria-label="Western Sahara " />
-            <path d="M644.1 250.968h15v-15h-15z" aria-label="Mauritania " />
-            <path d="M660.095 250.968h15v-15h-15z" aria-label="Mali " />
-            <path d="M676.091 250.968h15v-15h-15z" aria-label="Algeria " />
-            <path d="M692.087 250.968h15v-15h-15z" aria-label="Algeria " />
-            <path d="M708.097 250.968h15v-15h-15z" aria-label="Algeria " />
-            <path d="M724.093 250.968h15v-15h-15z" aria-label="Algeria " />
-            <path d="M804.086 250.968h15v-15h-15z" aria-label="Egypt " />
-            <path d="M820.097 250.968h15v-15h-15z" aria-label="Egypt " />
-            <path d="M852.088 250.968h15v-15h-15z" aria-label="Saudi Arabia " />
-            <path d="M868.099 250.968h15v-15h-15z" aria-label="Saudi Arabia " />
-            <path d="M884.094 250.968h15v-15h-15z" aria-label="Saudi Arabia " />
-            <path d="M900.09 250.968h15v-15h-15z" aria-label="United Arab Emirates " />
-            <path d="M916.086 250.968h15v-15h-15z" aria-label="Oman " />
-            <path d="M276.095 266.978h15v-15h-15z" aria-label="Mexico " />
-            <path d="M324.097 266.978h15v-15h-15z" aria-label="Mexico " />
-            <path d="M388.094 266.978h15v-15h-15z" aria-label="Haiti " />
-            <path d="M628.09 266.978h15v-15h-15z" aria-label="Mauritania " />
-            <path d="M644.1 266.978h15v-15h-15z" aria-label="Mauritania " />
-            <path d="M660.095 266.978h15v-15h-15z" aria-label="Mali " />
-            <path d="M676.091 266.978h15v-15h-15z" aria-label="Mali " />
-            <path d="M692.087 266.978h15v-15h-15z" aria-label="Mali " />
-            <path d="M708.097 266.978h15v-15h-15z" aria-label="Niger " />
-            <path d="M724.093 266.978h15v-15h-15z" aria-label="Niger " />
-            <path d="M740.089 266.978h15v-15h-15z" aria-label="Niger " />
-            <path d="M756.1 266.978h15v-15h-15z" aria-label="Chad " />
-            <path d="M772.095 266.978h15v-15h-15z" aria-label="Chad " />
-            <path d="M868.099 266.978h15v-15h-15z" aria-label="Saudi Arabia " />
-            <path d="M884.094 266.978h15v-15h-15z" aria-label="Saudi Arabia " />
-            <path d="M900.09 266.978h15v-15h-15z" aria-label="Saudi Arabia " />
-            <path d="M916.086 266.978h15v-15h-15z" aria-label="Oman " />
-            <path d="M308.087 282.974h15v-15h-15z" aria-label="Mexico " />
-            <path d="M324.097 282.974h15v-15h-15z" aria-label="Honduras " />
-            <path d="M340.093 282.974h15v-15h-15z" aria-label="Honduras " />
-            <path d="M628.09 282.974h15v-15h-15z" aria-label="Senegal " />
-            <path d="M644.1 282.974h15v-15h-15z" aria-label="Mauritania " />
-            <path d="M660.095 282.974h15v-15h-15z" aria-label="Mauritania " />
-            <path d="M676.091 282.974h15v-15h-15z" aria-label="Mali " />
-            <path d="M692.087 282.974h15v-15h-15z" aria-label="Niger " />
-            <path d="M708.097 282.974h15v-15h-15z" aria-label="Niger " />
-            <path d="M724.093 282.974h15v-15h-15z" aria-label="Niger " />
-            <path d="M740.089 282.974h15v-15h-15z" aria-label="Chad " />
-            <path d="M756.1 282.974h15v-15h-15z" aria-label="Chad " />
-            <path d="M772.095 282.974h15v-15h-15z" aria-label="Chad " />
-            <path d="M868.099 282.974h15v-15h-15z" aria-label="Yemen " />
-            <path d="M884.094 282.974h15v-15h-15z" aria-label="Yemen " />
-            <path d="M1108.093 282.974h15v-15h-15z" aria-label="Thailand " />
-            <path d="M1124.09 282.974h15v-15h-15z" aria-label="Vietnam " />
-            <path d="M1172.091 282.974h15v-15h-15z" aria-label="Philippines " />
-            <path d="M340.093 298.97h15v-15h-15z" aria-label="Nicaragua " />
-            <path d="M388.094 298.97h15v-15h-15z" aria-label="Colombia " />
-            <path d="M628.09 298.97h15v-15h-15z" aria-label="Guinea " />
-            <path d="M644.1 298.97h15v-15h-15z" aria-label="Guinea " />
-            <path d="M660.095 298.97h15v-15h-15z" aria-label="Mali " />
-            <path d="M676.091 298.97h15v-15h-15z" aria-label="Burkina Faso " />
-            <path d="M692.087 298.97h15v-15h-15z" aria-label="Benin " />
-            <path d="M772.095 298.97h15v-15h-15z" aria-label="Chad " />
-            <path d="M852.088 298.97h15v-15h-15z" aria-label="Ethiopia " />
-            <path d="M884.094 298.97h15v-15h-15z" aria-label="Somalia " />
-            <path d="M1124.09 298.97h15v-15h-15z" aria-label="Vietnam " />
-            <path d="M356.088 314.965h15v-15h-15z" aria-label="Panama " />
-            <path d="M372.099 314.965h15v-15h-15z" aria-label="Colombia " />
-            <path d="M388.094 314.965h15v-15h-15z" aria-label="Venezuela " />
-            <path d="M404.09 314.965h15v-15h-15z" aria-label="Venezuela " />
-            <path d="M420.086 314.965h15v-15h-15z" aria-label="Venezuela " />
-            <path d="M436.096 314.965h15v-15h-15z" aria-label="Venezuela " />
-            <path d="M644.1 314.965h15v-15h-15z" aria-label="Liberia " />
-            <path d="M660.095 314.965h15v-15h-15z" aria-label="Côte d'Ivoire " />
-            <path d="M676.091 314.965h15v-15h-15z" aria-label="Ghana " />
-            <path d="M692.087 314.965h15v-15h-15z" aria-label="Benin " />
-            <path d="M756.1 314.965h15v-15h-15z" aria-label="Chad " />
-            <path d="M772.095 314.965h15v-15h-15z" aria-label="Central African Republic " />
-            <path d="M788.09 314.965h15v-15h-15z" aria-label="South Sudan " />
-            <path d="M804.086 314.965h15v-15h-15z" aria-label="South Sudan " />
-            <path d="M820.097 314.965h15v-15h-15z" aria-label="Ethiopia " />
-            <path d="M836.093 314.965h15v-15h-15z" aria-label="Ethiopia " />
-            <path d="M852.088 314.965h15v-15h-15z" aria-label="Ethiopia " />
-            <path d="M868.099 314.965h15v-15h-15z" aria-label="Ethiopia " />
-            <path d="M884.094 314.965h15v-15h-15z" aria-label="Somalia " />
-            <path d="M1012.09 314.965h15v-15h-15z" aria-label="Sri Lanka " />
-            <path d="M1188.087 314.965h15v-15h-15z" aria-label="Philippines " />
-            <path d="M372.099 330.976h15v-15h-15z" aria-label="Colombia " />
-            <path d="M388.094 330.976h15v-15h-15z" aria-label="Colombia " />
-            <path d="M404.09 330.976h15v-15h-15z" aria-label="Colombia " />
-            <path d="M420.086 330.976h15v-15h-15z" aria-label="Venezuela " />
-            <path d="M436.096 330.976h15v-15h-15z" aria-label="Brazil " />
-            <path d="M452.092 330.976h15v-15h-15z" aria-label="Suriname " />
-            <path d="M468.088 330.976h15v-15h-15z" aria-label="French Guiana " />
-            <path d="M724.093 330.976h15v-15h-15z" aria-label="Cameroon " />
-            <path d="M740.089 330.976h15v-15h-15z" aria-label="Cameroon " />
-            <path d="M756.1 330.976h15v-15h-15z" aria-label="Central African Republic " />
-            <path d="M772.095 330.976h15v-15h-15z" aria-label="Central African Republic " />
-            <path d="M788.09 330.976h15v-15h-15z" aria-label="Democratic Republic of Congo " />
-            <path d="M804.086 330.976h15v-15h-15z" aria-label="South Sudan " />
-            <path d="M820.097 330.976h15v-15h-15z" aria-label="Uganda " />
-            <path d="M836.093 330.976h15v-15h-15z" aria-label="Ethiopia " />
-            <path d="M852.088 330.976h15v-15h-15z" aria-label="Ethiopia " />
-            <path d="M868.099 330.976h15v-15h-15z" aria-label="Somalia " />
-            <path d="M1076.087 330.976h15v-15h-15z" aria-label="Indonesia " />
-            <path d="M1092.098 330.976h15v-15h-15z" aria-label="Malaysia " />
-            <path d="M1156.095 330.976h15v-15h-15z" aria-label="Indonesia " />
-            <path d="M356.088 346.971h15v-15h-15z" aria-label="Ecuador " />
-            <path d="M372.099 346.971h15v-15h-15z" aria-label="Ecuador " />
-            <path d="M388.094 346.971h15v-15h-15z" aria-label="Colombia " />
-            <path d="M404.09 346.971h15v-15h-15z" aria-label="Brazil " />
-            <path d="M420.086 346.971h15v-15h-15z" aria-label="Brazil " />
-            <path d="M436.096 346.971h15v-15h-15z" aria-label="Brazil " />
-            <path d="M452.092 346.971h15v-15h-15z" aria-label="Brazil " />
-            <path d="M468.088 346.971h15v-15h-15z" aria-label="Brazil " />
-            <path d="M484.098 346.971h15v-15h-15z" aria-label="Brazil " />
-            <path d="M724.093 346.971h15v-15h-15z" aria-label="Gabon " />
-            <path d="M740.089 346.971h15v-15h-15z" aria-label="Republic of Congo " />
-            <path d="M756.1 346.971h15v-15h-15z" aria-label="Democratic Republic of Congo " />
-            <path d="M772.095 346.971h15v-15h-15z" aria-label="Democratic Republic of Congo " />
-            <path d="M788.09 346.971h15v-15h-15z" aria-label="Democratic Republic of Congo " />
-            <path d="M804.086 346.971h15v-15h-15z" aria-label="Uganda " />
-            <path d="M820.097 346.971h15v-15h-15z" aria-label="Uganda " />
-            <path d="M836.093 346.971h15v-15h-15z" aria-label="Kenya " />
-            <path d="M852.088 346.971h15v-15h-15z" aria-label="Somalia " />
-            <path d="M1092.098 346.971h15v-15h-15z" aria-label="Indonesia " />
-            <path d="M1140.1 346.971h15v-15h-15z" aria-label="Indonesia " />
-            <path d="M1156.095 346.971h15v-15h-15z" aria-label="Indonesia " />
-            <path d="M356.088 362.967h15v-15h-15z" aria-label="Peru " />
-            <path d="M372.099 362.967h15v-15h-15z" aria-label="Peru " />
-            <path d="M388.094 362.967h15v-15h-15z" aria-label="Peru " />
-            <path d="M404.09 362.967h15v-15h-15z" aria-label="Brazil " />
-            <path d="M420.086 362.967h15v-15h-15z" aria-label="Brazil " />
-            <path d="M436.096 362.967h15v-15h-15z" aria-label="Brazil " />
-            <path d="M452.092 362.967h15v-15h-15z" aria-label="Brazil " />
-            <path d="M468.088 362.967h15v-15h-15z" aria-label="Brazil " />
-            <path d="M484.098 362.967h15v-15h-15z" aria-label="Brazil " />
-            <path d="M500.094 362.967h15v-15h-15z" aria-label="Brazil " />
-            <path d="M516.09 362.967h15v-15h-15z" aria-label="Brazil " />
-            <path d="M740.089 362.967h15v-15h-15z" aria-label="Republic of Congo " />
-            <path d="M756.1 362.967h15v-15h-15z" aria-label="Democratic Republic of Congo " />
-            <path d="M772.095 362.967h15v-15h-15z" aria-label="Democratic Republic of Congo " />
-            <path d="M788.09 362.967h15v-15h-15z" aria-label="Democratic Republic of Congo " />
-            <path d="M804.086 362.967h15v-15h-15z" aria-label="Tanzania " />
-            <path d="M820.097 362.967h15v-15h-15z" aria-label="Tanzania " />
-            <path d="M836.093 362.967h15v-15h-15z" aria-label="Tanzania " />
-            <path d="M1108.093 362.967h15v-15h-15z" aria-label="Indonesia " />
-            <path d="M1172.091 362.967h15v-15h-15z" aria-label="Indonesia " />
-            <path d="M1236.089 362.967h15v-15h-15z" aria-label="Indonesia " />
-            <path d="M1252.099 362.967h15v-15h-15z" aria-label="Indonesia " />
-            <path d="M388.094 378.978h15v-15h-15z" aria-label="Brazil " />
-            <path d="M404.09 378.978h15v-15h-15z" aria-label="Brazil " />
-            <path d="M420.086 378.978h15v-15h-15z" aria-label="Brazil " />
-            <path d="M436.096 378.978h15v-15h-15z" aria-label="Brazil " />
-            <path d="M452.092 378.978h15v-15h-15z" aria-label="Brazil " />
-            <path d="M468.088 378.978h15v-15h-15z" aria-label="Brazil " />
-            <path d="M484.098 378.978h15v-15h-15z" aria-label="Brazil " />
-            <path d="M500.094 378.978h15v-15h-15z" aria-label="Brazil " />
-            <path d="M516.09 378.978h15v-15h-15z" aria-label="Brazil " />
-            <path d="M532.1 378.978h15v-15h-15z" aria-label="Brazil " />
-            <path d="M740.089 378.978h15v-15h-15z" aria-label="Angola " />
-            <path d="M756.1 378.978h15v-15h-15z" aria-label="Democratic Republic of Congo " />
-            <path d="M772.095 378.978h15v-15h-15z" aria-label="Democratic Republic of Congo " />
-            <path d="M788.09 378.978h15v-15h-15z" aria-label="Democratic Republic of Congo " />
-            <path d="M804.086 378.978h15v-15h-15z" aria-label="Democratic Republic of Congo " />
-            <path d="M820.097 378.978h15v-15h-15z" aria-label="Tanzania " />
-            <path d="M836.093 378.978h15v-15h-15z" aria-label="Tanzania " />
-            <path d="M1140.1 378.978h15v-15h-15z" aria-label="Indonesia " />
-            <path d="M1252.099 378.978h15v-15h-15z" aria-label="Indonesia " />
-            <path d="M372.099 394.973h15v-15h-15z" aria-label="Peru " />
-            <path d="M388.094 394.973h15v-15h-15z" aria-label="Peru " />
-            <path d="M404.09 394.973h15v-15h-15z" aria-label="Bolivia " />
-            <path d="M420.086 394.973h15v-15h-15z" aria-label="Brazil " />
-            <path d="M436.096 394.973h15v-15h-15z" aria-label="Brazil " />
-            <path d="M452.092 394.973h15v-15h-15z" aria-label="Brazil " />
-            <path d="M468.088 394.973h15v-15h-15z" aria-label="Brazil " />
-            <path d="M484.098 394.973h15v-15h-15z" aria-label="Brazil " />
-            <path d="M500.094 394.973h15v-15h-15z" aria-label="Brazil " />
-            <path d="M516.09 394.973h15v-15h-15z" aria-label="Brazil " />
-            <path d="M740.089 394.973h15v-15h-15z" aria-label="Angola " />
-            <path d="M756.1 394.973h15v-15h-15z" aria-label="Angola " />
-            <path d="M772.095 394.973h15v-15h-15z" aria-label="Angola " />
-            <path d="M788.09 394.973h15v-15h-15z" aria-label="Zambia " />
-            <path d="M804.086 394.973h15v-15h-15z" aria-label="Zambia " />
-            <path d="M820.097 394.973h15v-15h-15z" aria-label="Malawi " />
-            <path d="M836.093 394.973h15v-15h-15z" aria-label="Mozambique " />
-            <path d="M1236.089 394.973h15v-15h-15z" aria-label="Australia " />
-            <path d="M388.094 410.97h15v-15h-15z" aria-label="Peru " />
-            <path d="M404.09 410.97h15v-15h-15z" aria-label="Bolivia " />
-            <path d="M420.086 410.97h15v-15h-15z" aria-label="Bolivia " />
-            <path d="M436.096 410.97h15v-15h-15z" aria-label="Brazil " />
-            <path d="M452.092 410.97h15v-15h-15z" aria-label="Brazil " />
-            <path d="M468.088 410.97h15v-15h-15z" aria-label="Brazil " />
-            <path d="M484.098 410.97h15v-15h-15z" aria-label="Brazil " />
-            <path d="M500.094 410.97h15v-15h-15z" aria-label="Brazil " />
-            <path d="M516.09 410.97h15v-15h-15z" aria-label="Brazil " />
-            <path d="M740.089 410.97h15v-15h-15z" aria-label="Angola " />
-            <path d="M756.1 410.97h15v-15h-15z" aria-label="Angola " />
-            <path d="M772.095 410.97h15v-15h-15z" aria-label="Zambia " />
-            <path d="M788.09 410.97h15v-15h-15z" aria-label="Zambia " />
-            <path d="M804.086 410.97h15v-15h-15z" aria-label="Zimbabwe " />
-            <path d="M820.097 410.97h15v-15h-15z" aria-label="Mozambique " />
-            <path d="M836.093 410.97h15v-15h-15z" aria-label="Mozambique " />
-            <path d="M868.099 410.97h15v-15h-15z" aria-label="Madagascar " />
-            <path d="M884.094 410.97h15v-15h-15z" aria-label="Madagascar " />
-            <path d="M1188.087 410.97h15v-15h-15z" aria-label="Australia " />
-            <path d="M1204.097 410.97h15v-15h-15z" aria-label="Australia " />
-            <path d="M1220.093 410.97h15v-15h-15z" aria-label="Australia " />
-            <path d="M1236.089 410.97h15v-15h-15z" aria-label="Australia " />
-            <path d="M1268.095 410.97h15v-15h-15z" aria-label="Australia " />
-            <path d="M404.09 426.965h15v-15h-15z" aria-label="Chile " />
-            <path d="M420.086 426.965h15v-15h-15z" aria-label="Bolivia " />
-            <path d="M436.096 426.965h15v-15h-15z" aria-label="Paraguay " />
-            <path d="M452.092 426.965h15v-15h-15z" aria-label="Brazil " />
-            <path d="M468.088 426.965h15v-15h-15z" aria-label="Brazil " />
-            <path d="M484.098 426.965h15v-15h-15z" aria-label="Brazil " />
-            <path d="M500.094 426.965h15v-15h-15z" aria-label="Brazil " />
-            <path d="M516.09 426.965h15v-15h-15z" aria-label="Brazil " />
-            <path d="M740.089 426.965h15v-15h-15z" aria-label="Namibia " />
-            <path d="M756.1 426.965h15v-15h-15z" aria-label="Namibia " />
-            <path d="M772.095 426.965h15v-15h-15z" aria-label="Botswana " />
-            <path d="M788.09 426.965h15v-15h-15z" aria-label="Botswana " />
-            <path d="M804.086 426.965h15v-15h-15z" aria-label="Zimbabwe " />
-            <path d="M820.097 426.965h15v-15h-15z" aria-label="Mozambique " />
-            <path d="M868.099 426.965h15v-15h-15z" aria-label="Madagascar " />
-            <path d="M1188.087 426.965h15v-15h-15z" aria-label="Australia " />
-            <path d="M1204.097 426.965h15v-15h-15z" aria-label="Australia " />
-            <path d="M1220.093 426.965h15v-15h-15z" aria-label="Australia " />
-            <path d="M1236.089 426.965h15v-15h-15z" aria-label="Australia " />
-            <path d="M1252.099 426.965h15v-15h-15z" aria-label="Australia " />
-            <path d="M1268.095 426.965h15v-15h-15z" aria-label="Australia " />
-            <path d="M404.09 442.975h15v-15h-15z" aria-label="Chile " />
-            <path d="M420.086 442.975h15v-15h-15z" aria-label="Argentina " />
-            <path d="M436.096 442.975h15v-15h-15z" aria-label="Paraguay " />
-            <path d="M452.092 442.975h15v-15h-15z" aria-label="Paraguay " />
-            <path d="M468.088 442.975h15v-15h-15z" aria-label="Brazil " />
-            <path d="M484.098 442.975h15v-15h-15z" aria-label="Brazil " />
-            <path d="M500.094 442.975h15v-15h-15z" aria-label="Brazil " />
-            <path d="M740.089 442.975h15v-15h-15z" aria-label="Namibia " />
-            <path d="M756.1 442.975h15v-15h-15z" aria-label="Namibia " />
-            <path d="M772.095 442.975h15v-15h-15z" aria-label="Botswana " />
-            <path d="M788.09 442.975h15v-15h-15z" aria-label="Botswana " />
-            <path d="M804.086 442.975h15v-15h-15z" aria-label="South Africa " />
-            <path d="M820.097 442.975h15v-15h-15z" aria-label="Mozambique " />
-            <path d="M868.099 442.975h15v-15h-15z" aria-label="Madagascar " />
-            <path d="M1156.095 442.975h15v-15h-15z" aria-label="Australia " />
-            <path d="M1172.091 442.975h15v-15h-15z" aria-label="Australia " />
-            <path d="M1188.087 442.975h15v-15h-15z" aria-label="Australia " />
-            <path d="M1204.097 442.975h15v-15h-15z" aria-label="Australia " />
-            <path d="M1220.093 442.975h15v-15h-15z" aria-label="Australia " />
-            <path d="M1236.089 442.975h15v-15h-15z" aria-label="Australia " />
-            <path d="M1252.099 442.975h15v-15h-15z" aria-label="Australia " />
-            <path d="M1268.095 442.975h15v-15h-15z" aria-label="Australia " />
-            <path d="M1284.09 442.975h15v-15h-15z" aria-label="Australia " />
-            <path d="M404.09 458.971h15v-15h-15z" aria-label="Chile " />
-            <path d="M420.086 458.971h15v-15h-15z" aria-label="Argentina " />
-            <path d="M436.096 458.971h15v-15h-15z" aria-label="Argentina " />
-            <path d="M452.092 458.971h15v-15h-15z" aria-label="Paraguay " />
-            <path d="M468.088 458.971h15v-15h-15z" aria-label="Brazil " />
-            <path d="M484.098 458.971h15v-15h-15z" aria-label="Brazil " />
-            <path d="M756.1 458.971h15v-15h-15z" aria-label="Namibia " />
-            <path d="M772.095 458.971h15v-15h-15z" aria-label="South Africa " />
-            <path d="M788.09 458.971h15v-15h-15z" aria-label="South Africa " />
-            <path d="M804.086 458.971h15v-15h-15z" aria-label="South Africa " />
-            <path d="M1156.095 458.971h15v-15h-15z" aria-label="Australia " />
-            <path d="M1172.091 458.971h15v-15h-15z" aria-label="Australia " />
-            <path d="M1188.087 458.971h15v-15h-15z" aria-label="Australia " />
-            <path d="M1204.097 458.971h15v-15h-15z" aria-label="Australia " />
-            <path d="M1220.093 458.971h15v-15h-15z" aria-label="Australia " />
-            <path d="M1236.089 458.971h15v-15h-15z" aria-label="Australia " />
-            <path d="M1252.099 458.971h15v-15h-15z" aria-label="Australia " />
-            <path d="M1268.095 458.971h15v-15h-15z" aria-label="Australia " />
-            <path d="M1284.09 458.971h15v-15h-15z" aria-label="Australia " />
-            <path d="M1300.086 458.971h15v-15h-15z" aria-label="Australia " />
-            <path d="M404.09 474.967h15v-15h-15z" aria-label="Argentina " />
-            <path d="M420.086 474.967h15v-15h-15z" aria-label="Argentina " />
-            <path d="M436.096 474.967h15v-15h-15z" aria-label="Argentina " />
-            <path d="M452.092 474.967h15v-15h-15z" aria-label="Uruguay " />
-            <path d="M468.088 474.967h15v-15h-15z" aria-label="Brazil " />
-            <path d="M756.1 474.967h15v-15h-15z" aria-label="South Africa " />
-            <path d="M772.095 474.967h15v-15h-15z" aria-label="South Africa " />
-            <path d="M788.09 474.967h15v-15h-15z" aria-label="South Africa " />
-            <path d="M804.086 474.967h15v-15h-15z" aria-label="South Africa " />
-            <path d="M1156.095 474.967h15v-15h-15z" aria-label="Australia " />
-            <path d="M1172.091 474.967h15v-15h-15z" aria-label="Australia " />
-            <path d="M1188.087 474.967h15v-15h-15z" aria-label="Australia " />
-            <path d="M1204.097 474.967h15v-15h-15z" aria-label="Australia " />
-            <path d="M1220.093 474.967h15v-15h-15z" aria-label="Australia " />
-            <path d="M1236.089 474.967h15v-15h-15z" aria-label="Australia " />
-            <path d="M1252.099 474.967h15v-15h-15z" aria-label="Australia " />
-            <path d="M1268.095 474.967h15v-15h-15z" aria-label="Australia " />
-            <path d="M1284.09 474.967h15v-15h-15z" aria-label="Australia " />
-            <path d="M1300.086 474.967h15v-15h-15z" aria-label="Australia " />
-            <path d="M404.09 490.977h15v-15h-15z" aria-label="Argentina " />
-            <path d="M420.086 490.977h15v-15h-15z" aria-label="Argentina " />
-            <path d="M436.096 490.977h15v-15h-15z" aria-label="Argentina " />
-            <path d="M452.092 490.977h15v-15h-15z" aria-label="Uruguay " />
-            <path d="M756.1 490.977h15v-15h-15z" aria-label="South Africa " />
-            <path d="M772.095 490.977h15v-15h-15z" aria-label="South Africa " />
-            <path d="M788.09 490.977h15v-15h-15z" aria-label="South Africa " />
-            <path d="M1156.095 490.977h15v-15h-15z" aria-label="Australia " />
-            <path d="M1172.091 490.977h15v-15h-15z" aria-label="Australia " />
-            <path d="M1236.089 490.977h15v-15h-15z" aria-label="Australia " />
-            <path d="M1252.099 490.977h15v-15h-15z" aria-label="Australia " />
-            <path d="M1268.095 490.977h15v-15h-15z" aria-label="Australia " />
-            <path d="M1284.09 490.977h15v-15h-15z" aria-label="Australia " />
-            <path d="M388.094 506.973h15v-15h-15z" aria-label="Chile " />
-            <path d="M404.09 506.973h15v-15h-15z" aria-label="Argentina " />
-            <path d="M420.086 506.973h15v-15h-15z" aria-label="Argentina " />
-            <path d="M436.096 506.973h15v-15h-15z" aria-label="Argentina " />
-            <path d="M452.092 506.973h15v-15h-15z" aria-label="Argentina " />
-            <path d="M1252.099 506.973h15v-15h-15z" aria-label="Australia " />
-            <path d="M1268.095 506.973h15v-15h-15z" aria-label="Australia " />
-            <path d="M1284.09 506.973h15v-15h-15z" aria-label="Australia " />
-            <path d="M1396.09 506.973h15v-15h-15z" aria-label="New Zealand " />
-            <path d="M388.094 522.969h15v-15h-15z" aria-label="Chile " />
-            <path d="M404.09 522.969h15v-15h-15z" aria-label="Argentina " />
-            <path d="M420.086 522.969h15v-15h-15z" aria-label="Argentina " />
-            <path d="M1396.09 522.969h15v-15h-15z" aria-label="New Zealand " />
-            <path d="M388.094 538.979h15v-15h-15z" aria-label="Chile " />
-            <path d="M404.09 538.979h15v-15h-15z" aria-label="Argentina " />
-            <path d="M420.086 538.979h15v-15h-15z" aria-label="Argentina " />
-            <path d="M1284.09 538.979h15v-15h-15z" aria-label="Australia " />
-            <path d="M1380.094 538.979h15v-15h-15z" aria-label="New Zealand " />
-            <path d="M388.094 554.975h15v-15h-15z" aria-label="Chile " />
-            <path d="M404.09 554.975h15v-15h-15z" aria-label="Argentina " />
-            <path d="M1364.099 554.975h15v-15h-15z" aria-label="New Zealand " />
-            <path d="M388.094 570.97h15v-15h-15z" aria-label="Chile " />
-            <path d="M404.09 570.97h15v-15h-15z" aria-label="Argentina " />
-            <path d="M388.094 586.966h15v-15h-15z" aria-label="Chile " />
-            <path d="M388.094 602.977h15v-15h-15z" aria-label="Chile " />
-            <path d="M404.09 602.977h15v-15h-15z" aria-label="Argentina " />
-            <path d="M724.093 314.965h15v-15h-15z" aria-label="Nigeria " />
-            <path d="M708.097 314.965h15v-15h-15z" aria-label="Nigeria " />
-            <path d="M724.093 298.97h15v-15h-15z" aria-label="Nigeria " />
-            <path d="M708.097 298.97h15v-15h-15z" aria-label="Nigeria " />
-            <path d="M740.089 314.965h15v-15h-15z" aria-label="Cameroon " />
-            <path d="M756.1 298.97h15v-15h-15z" aria-label="Chad " />
-            <path d="M740.089 298.97h15v-15h-15z" aria-label="Nigeria " />
-            <path d="M820.097 298.97h15v-15h-15z" aria-label="Sudan " />
-            <path d="M804.086 298.97h15v-15h-15z" aria-label="Sudan " />
-            <path d="M820.097 282.974h15v-15h-15z" aria-label="Sudan " />
-            <path d="M804.086 282.974h15v-15h-15z" aria-label="Sudan " />
-            <path d="M788.09 282.974h15v-15h-15z" aria-label="Sudan " />
-            <path d="M820.097 266.978h15v-15h-15z" aria-label="Sudan " />
-            <path d="M804.086 266.978h15v-15h-15z" aria-label="Sudan " />
-            <path d="M788.09 266.978h15v-15h-15z" aria-label="Sudan " />
-            <path d="M788.09 298.97h15v-15h-15z" aria-label="Sudan " />
-            <path d="M836.093 298.97h15v-15h-15z" aria-label="Ethiopia " />
-            <path d="M836.093 282.974h15v-15h-15z" aria-label="Eritrea " />
-            <path d="M852.088 266.978h15v-15h-15z" aria-label="Saudi Arabia " />
-            <path d="M1076.087 250.968h15v-15h-15z" aria-label="Myanmar " />
-            <path d="M1076.087 234.972h15v-15h-15z" aria-label="Myanmar " />
-            <path d="M1076.087 266.978h15v-15h-15z" aria-label="Myanmar " />
-            <path d="M1092.098 266.978h15v-15h-15z" aria-label="Thailand " />
-            <path d="M1172.091 250.968h15v-15h-15z" aria-label="Taiwan " />
-            <path d="M1060.092 138.968h15v-15h-15z" aria-label="Mongolia " />
-            <path d="M1268.095 378.978h15v-15h-15z" aria-label="Papua New Guinea " />
-            <path d="M1268.095 362.967h15v-15h-15z" aria-label="Papua New Guinea " />
-            <path d="M1332.092 378.978h15v-15h-15z" aria-label="Solomon Islands " />
-            <path d="M372.099 378.978h15v-15h-15z" aria-label="Peru " />
-            <path d="M1300.086 362.967h15v-15h-15z" aria-label="Papua New Guinea " />
-            <path d="M1220.093 202.966h15v-15h-15z" aria-label="Japan " />
-            <path d="M1252.099 186.97h15v-15h-15z" aria-label="Japan " />
-            <path d="M1252.099 170.974h15v-15h-15z" aria-label="Japan " />
-            <path d="M1268.095 154.979h15v-15h-15z" aria-label="Japan " />
-            <path d="M1252.099 154.979h15v-15h-15z" aria-label="Japan " />
-            <path d="M1236.089 186.97h15v-15h-15z" aria-label="Japan " />
-            <path d="M1204.097 186.97h15v-15h-15z" aria-label="South Korea " />
-            <path d="M1124.09 266.978h15v-15h-15z" aria-label="China " />
-            <path d="M1156.095 250.968h15v-15h-15z" aria-label="China " />
-            <path d="M1140.1 250.968h15v-15h-15z" aria-label="China " />
-            <path d="M1092.098 250.968h15v-15h-15z" aria-label="China " />
-            <path d="M1140.1 234.972h15v-15h-15z" aria-label="China " />
-            <path d="M1108.093 218.976h15v-15h-15z" aria-label="China " />
-            <path d="M1076.087 218.976h15v-15h-15z" aria-label="China " />
-            <path d="M1140.1 202.966h15v-15h-15z" aria-label="China " />
-            <path d="M1124.09 186.97h15v-15h-15z" aria-label="China " />
-            <path d="M1156.095 234.972h15v-15h-15z" aria-label="China " />
-            <path d="M1124.09 250.968h15v-15h-15z" aria-label="China " />
-            <path d="M1156.095 218.976h15v-15h-15z" aria-label="China " />
-            <path d="M1092.098 234.972h15v-15h-15z" aria-label="China " />
-            <path d="M1140.1 218.976h15v-15h-15z" aria-label="China " />
-            <path d="M1124.09 234.972h15v-15h-15z" aria-label="China " />
-            <path d="M1108.093 234.972h15v-15h-15z" aria-label="China " />
-            <path d="M1172.091 218.976h15v-15h-15z" aria-label="China " />
-            <path d="M1124.09 218.976h15v-15h-15z" aria-label="China " />
-            <path d="M1092.098 218.976h15v-15h-15z" aria-label="China " />
-            <path d="M1156.095 186.97h15v-15h-15z" aria-label="China " />
-            <path d="M1204.097 138.968h15v-15h-15z" aria-label="China " />
-            <path d="M1060.092 218.976h15v-15h-15z" aria-label="China " />
-            <path d="M1044.096 218.976h15v-15h-15z" aria-label="China " />
-            <path d="M1028.1 218.976h15v-15h-15z" aria-label="China " />
-            <path d="M1172.091 202.966h15v-15h-15z" aria-label="China " />
-            <path d="M1156.095 202.966h15v-15h-15z" aria-label="China " />
-            <path d="M1124.09 202.966h15v-15h-15z" aria-label="China " />
-            <path d="M1108.093 202.966h15v-15h-15z" aria-label="China " />
-            <path d="M1092.098 202.966h15v-15h-15z" aria-label="China " />
-            <path d="M1076.087 202.966h15v-15h-15z" aria-label="China " />
-            <path d="M1060.092 202.966h15v-15h-15z" aria-label="China " />
-            <path d="M1044.096 202.966h15v-15h-15z" aria-label="China " />
-            <path d="M1028.1 202.966h15v-15h-15z" aria-label="China " />
-            <path d="M1012.09 202.966h15v-15h-15z" aria-label="China " />
-            <path d="M1172.091 186.97h15v-15h-15z" aria-label="China " />
-            <path d="M1140.1 186.97h15v-15h-15z" aria-label="China " />
-            <path d="M260.1 250.968h15v-15h-15z" aria-label="Mexico " />
-            <path d="M1108.093 186.97h15v-15h-15z" aria-label="China " />
-            <path d="M1092.098 186.97h15v-15h-15z" aria-label="China " />
-            <path d="M1076.087 186.97h15v-15h-15z" aria-label="China " />
-            <path d="M1060.092 186.97h15v-15h-15z" aria-label="China " />
-            <path d="M1044.096 186.97h15v-15h-15z" aria-label="China " />
-            <path d="M1028.1 186.97h15v-15h-15z" aria-label="China " />
-            <path d="M1012.09 186.97h15v-15h-15z" aria-label="China " />
-            <path d="M996.094 186.97h15v-15h-15z" aria-label="China " />
-            <path d="M1156.095 170.974h15v-15h-15z" aria-label="China " />
-            <path d="M1140.1 170.974h15v-15h-15z" aria-label="China " />
-            <path d="M1124.09 170.974h15v-15h-15z" aria-label="China " />
-            <path d="M1108.093 170.974h15v-15h-15z" aria-label="China " />
-            <path d="M1092.098 170.974h15v-15h-15z" aria-label="China " />
-            <path d="M1076.087 170.974h15v-15h-15z" aria-label="China " />
-            <path d="M1060.092 170.974h15v-15h-15z" aria-label="China " />
-            <path d="M1044.096 170.974h15v-15h-15z" aria-label="China " />
-            <path d="M1028.1 170.974h15v-15h-15z" aria-label="China " />
-            <path d="M1012.09 170.974h15v-15h-15z" aria-label="China " />
-            <path d="M996.094 170.974h15v-15h-15z" aria-label="China " />
-            <path d="M1204.097 154.979h15v-15h-15z" aria-label="China " />
-            <path d="M1188.087 154.979h15v-15h-15z" aria-label="China " />
-            <path d="M1172.091 154.979h15v-15h-15z" aria-label="China " />
-            <path d="M1156.095 154.979h15v-15h-15z" aria-label="China " />
-            <path d="M1140.1 154.979h15v-15h-15z" aria-label="China " />
-            <path d="M1060.092 154.979h15v-15h-15z" aria-label="China " />
-            <path d="M1044.096 154.979h15v-15h-15z" aria-label="China " />
-            <path d="M1028.1 154.979h15v-15h-15z" aria-label="China " />
-            <path d="M1012.09 154.979h15v-15h-15z" aria-label="China " />
-            <path d="M1220.093 138.968h15v-15h-15z" aria-label="China " />
-            <path d="M1188.087 138.968h15v-15h-15z" aria-label="China " />
-            <path d="M228.093 234.972h15v-15h-15z" aria-label="Mexico " />
-            <path d="M1172.091 138.968h15v-15h-15z" aria-label="China " />
-            <path d="M1156.095 138.968h15v-15h-15z" aria-label="China " />
-            <path d="M1044.096 138.968h15v-15h-15z" aria-label="China " />
-            <path d="M1028.1 138.968h15v-15h-15z" aria-label="China " />
-            <path d="M1204.097 122.972h15v-15h-15z" aria-label="China " />
-            <path d="M1188.087 122.972h15v-15h-15z" aria-label="China " />
-            <path d="M1172.091 122.972h15v-15h-15z" aria-label="China " />
-            <path d="M1156.095 122.972h15v-15h-15z" aria-label="China " />
-            <path d="M1188.087 106.977h15v-15h-15z" aria-label="China " />
-            <path d="M1172.091 106.977h15v-15h-15z" aria-label="China " />
-            <path d="M292.09 282.974h15v-15h-15z" aria-label="Mexico " />
-            <path d="M996.094 298.97h15v-15h-15z" aria-label="India " />
-            <path d="M996.094 282.974h15v-15h-15z" aria-label="India " />
-            <path d="M1028.1 266.978h15v-15h-15z" aria-label="India " />
-            <path d="M1012.09 266.978h15v-15h-15z" aria-label="India " />
-            <path d="M996.094 266.978h15v-15h-15z" aria-label="India " />
-            <path d="M980.098 266.978h15v-15h-15z" aria-label="India " />
-            <path d="M1060.092 250.968h15v-15h-15z" aria-label="India " />
-            <path d="M1044.096 250.968h15v-15h-15z" aria-label="India " />
-            <path d="M1028.1 250.968h15v-15h-15z" aria-label="India " />
-            <path d="M1012.09 250.968h15v-15h-15z" aria-label="India " />
-            <path d="M996.094 250.968h15v-15h-15z" aria-label="India " />
-            <path d="M980.098 250.968h15v-15h-15z" aria-label="India " />
-            <path d="M964.088 250.968h15v-15h-15z" aria-label="India " />
-            <path d="M1060.092 234.972h15v-15h-15z" aria-label="India " />
-            <path d="M1044.096 234.972h15v-15h-15z" aria-label="India " />
-            <path d="M1012.09 234.972h15v-15h-15z" aria-label="India " />
-            <path d="M996.094 234.972h15v-15h-15z" aria-label="India " />
-            <path d="M996.094 218.976h15v-15h-15z" aria-label="India " />
-            <path d="M996.094 202.966h15v-15h-15z" aria-label="India " />
-            <path d="M980.098 234.972h15v-15h-15z" aria-label="India " />
-            <path d="M1108.093 298.97h15v-15h-15z" aria-label="Cambodia " />
-            <path d="M1092.098 282.974h15v-15h-15z" aria-label="Thailand " />
-            <path d="M1108.093 266.978h15v-15h-15z" aria-label="Vietnam " />
-            <path d="M1108.093 250.968h15v-15h-15z" aria-label="Vietnam " />
-            <path d="M276.095 250.968h15v-15h-15z" aria-label="Mexico " />
-            <path d="M1028.1 234.972h15v-15h-15z" aria-label="Nepal " />
-            <path d="M1012.09 218.976h15v-15h-15z" aria-label="Nepal " />
-            <path d="M212.097 218.976h15v-15h-15z" aria-label="Mexico " />
-            <path d="M756.1 250.968h15v-15h-15z" aria-label="Libya " />
-            <path d="M740.089 250.968h15v-15h-15z" aria-label="Libya " />
-            <path d="M772.095 234.972h15v-15h-15z" aria-label="Libya " />
-            <path d="M756.1 234.972h15v-15h-15z" aria-label="Libya " />
-            <path d="M740.089 234.972h15v-15h-15z" aria-label="Libya " />
-            <path d="M724.093 234.972h15v-15h-15z" aria-label="Libya " />
-            <path d="M772.095 218.976h15v-15h-15z" aria-label="Libya " />
-            <path d="M756.1 218.976h15v-15h-15z" aria-label="Libya " />
-            <path d="M740.089 218.976h15v-15h-15z" aria-label="Libya " />
-            <path d="M724.093 218.976h15v-15h-15z" aria-label="Libya " />
-            <path d="M788.09 250.968h15v-15h-15z" aria-label="Egypt " />
-            <path d="M772.095 250.968h15v-15h-15z" aria-label="Libya " />
-            <path d="M788.09 234.972h15v-15h-15z" aria-label="Egypt " />
-            <path d="M788.09 218.976h15v-15h-15z" aria-label="Egypt " />
-            <path d="M628.09 234.972h15v-15h-15z" aria-label="Western Sahara " />
-            <path d="M644.1 218.976h15v-15h-15z" aria-label="Morocco " />
-            <path d="M660.095 202.966h15v-15h-15z" aria-label="Morocco " />
-            <path d="M1188.087 170.974h15v-15h-15z" aria-label="North Korea " />
-            <path d="M644.1 154.979h15v-15h-15z" aria-label="Spain " />
-            <path d="M228.093 186.97h15v-15h-15z" aria-label="United States " />
-            <path d="M196.087 186.97h15v-15h-15z" aria-label="United States " />
-            <path d="M180.091 154.979h15v-15h-15z" aria-label="United States " />
-            <path d="M356.088 234.972h15v-15h-15z" aria-label="United States " />
-            <path d="M340.093 218.976h15v-15h-15z" aria-label="United States " />
-            <path d="M308.087 218.976h15v-15h-15z" aria-label="United States " />
-            <path d="M292.09 218.976h15v-15h-15z" aria-label="United States " />
-            <path d="M276.095 218.976h15v-15h-15z" aria-label="United States " />
-            <path d="M260.1 218.976h15v-15h-15z" aria-label="United States " />
-            <path d="M356.088 202.966h15v-15h-15z" aria-label="United States " />
-            <path d="M340.093 202.966h15v-15h-15z" aria-label="United States " />
-            <path d="M324.097 202.966h15v-15h-15z" aria-label="United States " />
-            <path d="M308.087 202.966h15v-15h-15z" aria-label="United States " />
-            <path d="M292.09 202.966h15v-15h-15z" aria-label="United States " />
-            <path d="M276.095 202.966h15v-15h-15z" aria-label="United States " />
-            <path d="M260.1 202.966h15v-15h-15z" aria-label="United States " />
-            <path d="M244.089 202.966h15v-15h-15z" aria-label="United States " />
-            <path d="M228.093 202.966h15v-15h-15z" aria-label="United States " />
-            <path d="M212.097 202.966h15v-15h-15z" aria-label="United States " />
-            <path d="M372.099 186.97h15v-15h-15z" aria-label="United States " />
-            <path d="M356.088 186.97h15v-15h-15z" aria-label="United States " />
-            <path d="M340.093 186.97h15v-15h-15z" aria-label="United States " />
-            <path d="M324.097 186.97h15v-15h-15z" aria-label="United States " />
-            <path d="M308.087 186.97h15v-15h-15z" aria-label="United States " />
-            <path d="M292.09 186.97h15v-15h-15z" aria-label="United States " />
-            <path d="M276.095 186.97h15v-15h-15z" aria-label="United States " />
-            <path d="M260.1 186.97h15v-15h-15z" aria-label="United States " />
-            <path d="M244.089 186.97h15v-15h-15z" aria-label="United States " />
-            <path d="M212.097 186.97h15v-15h-15z" aria-label="United States " />
-            <path d="M180.091 170.974h15v-15h-15z" aria-label="United States " />
-            <path d="M372.099 170.974h15v-15h-15z" aria-label="United States " />
-            <path d="M660.095 186.97h15v-15h-15z" aria-label="Spain " />
-            <path d="M356.088 170.974h15v-15h-15z" aria-label="United States " />
-            <path d="M340.093 170.974h15v-15h-15z" aria-label="United States " />
-            <path d="M324.097 170.974h15v-15h-15z" aria-label="United States " />
-            <path d="M308.087 170.974h15v-15h-15z" aria-label="United States " />
-            <path d="M292.09 170.974h15v-15h-15z" aria-label="United States " />
-            <path d="M276.095 170.974h15v-15h-15z" aria-label="United States " />
-            <path d="M260.1 170.974h15v-15h-15z" aria-label="United States " />
-            <path d="M244.089 170.974h15v-15h-15z" aria-label="United States " />
-            <path d="M228.093 170.974h15v-15h-15z" aria-label="United States " />
-            <path d="M212.097 170.974h15v-15h-15z" aria-label="United States " />
-            <path d="M196.087 170.974h15v-15h-15z" aria-label="United States " />
-            <path d="M388.094 154.979h15v-15h-15z" aria-label="United States " />
-            <path d="M660.095 170.974h15v-15h-15z" aria-label="Spain " />
-            <path d="M372.099 154.979h15v-15h-15z" aria-label="United States " />
-            <path d="M340.093 154.979h15v-15h-15z" aria-label="United States " />
-            <path d="M324.097 154.979h15v-15h-15z" aria-label="United States " />
-            <path d="M308.087 154.979h15v-15h-15z" aria-label="United States " />
-            <path d="M292.09 154.979h15v-15h-15z" aria-label="United States " />
-            <path d="M276.095 154.979h15v-15h-15z" aria-label="United States " />
-            <path d="M260.1 154.979h15v-15h-15z" aria-label="United States " />
-            <path d="M244.089 154.979h15v-15h-15z" aria-label="United States " />
-            <path d="M228.093 154.979h15v-15h-15z" aria-label="United States " />
-            <path d="M212.097 154.979h15v-15h-15z" aria-label="United States " />
-            <path d="M196.087 154.979h15v-15h-15z" aria-label="United States " />
-            <path d="M404.09 138.968h15v-15h-15z" aria-label="United States " />
-            <path d="M340.093 138.968h15v-15h-15z" aria-label="United States " />
-            <path d="M324.097 138.968h15v-15h-15z" aria-label="United States " />
-            <path d="M308.087 138.968h15v-15h-15z" aria-label="United States " />
-            <path d="M292.09 138.968h15v-15h-15z" aria-label="United States " />
-            <path d="M276.095 138.968h15v-15h-15z" aria-label="United States " />
-            <path d="M260.1 138.968h15v-15h-15z" aria-label="United States " />
-            <path d="M244.089 138.968h15v-15h-15z" aria-label="United States " />
-            <path d="M228.093 138.968h15v-15h-15z" aria-label="United States " />
-            <path d="M212.097 138.968h15v-15h-15z" aria-label="United States " />
-            <path d="M196.087 138.968h15v-15h-15z" aria-label="United States " />
-            <path d="M180.091 138.968h15v-15h-15z" aria-label="United States " />
-            <path d="M308.087 122.972h15v-15h-15z" aria-label="United States " />
-            <path d="M292.09 122.972h15v-15h-15z" aria-label="United States " />
-            <path d="M276.095 122.972h15v-15h-15z" aria-label="United States " />
-            <path d="M260.1 122.972h15v-15h-15z" aria-label="United States " />
-            <path d="M244.089 122.972h15v-15h-15z" aria-label="United States " />
-            <path d="M228.093 122.972h15v-15h-15z" aria-label="United States " />
-            <path d="M212.097 122.972h15v-15h-15z" aria-label="United States " />
-            <path d="M196.087 122.972h15v-15h-15z" aria-label="United States " />
-            <path d="M148.1 74.97h15v-15h-15z" aria-label="United States " />
-            <path d="M52.096 58.975h15v-15h-15z" aria-label="United States " />
-            <path d="M132.09 42.979h15v-15h-15z" aria-label="United States " />
-            <path d="M116.094 42.979h15v-15h-15z" aria-label="United States " />
-            <path d="M68.092 42.979h15v-15h-15z" aria-label="United States " />
-            <path d="M52.096 42.979h15v-15h-15z" aria-label="United States " />
-            <path d="M36.1 42.979h15v-15h-15z" aria-label="United States " />
-            <path d="M100.098 26.969h15v-15h-15z" aria-label="United States " />
-            <path d="M84.088 26.969h15v-15h-15z" aria-label="United States " />
-            <path d="M68.092 26.969h15v-15h-15z" aria-label="United States " />
-            <path d="M52.096 26.969h15v-15h-15z" aria-label="United States " />
-            <path d="M36.1 26.969h15v-15h-15z" aria-label="United States " />
-            <path d="M20.09 26.969h15v-15h-15z" aria-label="United States " />
-            <path d="M100.098 10.973h15v-15h-15z" aria-label="United States " />
-            <path d="M84.088 10.973h15v-15h-15z" aria-label="United States " />
-            <path d="M68.092 10.973h15v-15h-15z" aria-label="United States " />
-            <path d="M52.096 10.973h15v-15h-15z" aria-label="United States " />
-            <path d="M36.1 10.973h15v-15h-15z" aria-label="United States " />
-            <path d="M100.098-5.023h15v-15h-15z" aria-label="United States " />
-            <path d="M84.088-5.023h15v-15h-15z" aria-label="United States " />
-            <path d="M68.092-5.023h15v-15h-15z" aria-label="United States " />
-            <path d="M52.096-5.023h15v-15h-15z" aria-label="United States " />
-            <path d="M36.1-5.023h15v-15h-15z" aria-label="United States " />
-            <path d="M20.09-5.023h15v-15h-15z" aria-label="United States " />
-            <path d="M4.094-5.023h15v-15h-15z" aria-label="United States " />
-            <path d="M100.098-21.033h15v-15h-15z" aria-label="United States " />
-            <path d="M84.088-21.033h15v-15h-15z" aria-label="United States " />
-            <path d="M68.092-21.033h15v-15h-15z" aria-label="United States " />
-            <path d="M52.096-21.033h15v-15h-15z" aria-label="United States " />
-            <path d="M36.1-21.033h15v-15h-15z" aria-label="United States " />
-            <path d="M20.09-21.033h15v-15h-15z" aria-label="United States " />
-            <path d="M100.098-37.029h15v-15h-15z" aria-label="United States " />
-            <path d="M84.088-37.029h15v-15h-15z" aria-label="United States " />
-            <path d="M68.092-37.029h15v-15h-15z" aria-label="United States " />
-            <path d="M52.096-37.029h15v-15h-15z" aria-label="United States " />
-            <path d="M36.1-37.029h15v-15h-15z" aria-label="United States " />
-            <path d="M20.09-37.029h15v-15h-15z" aria-label="United States " />
-            <path d="M4.094-37.029h15v-15h-15z" aria-label="United States " />
-            <path d="M100.098-53.025h15v-15h-15z" aria-label="United States " />
-            <path d="M84.088-53.025h15v-15h-15z" aria-label="United States " />
-            <path d="M68.092-53.025h15v-15h-15z" aria-label="United States " />
-            <path d="M52.096-53.025h15v-15h-15z" aria-label="United States " />
-            <path d="M36.1-53.025h15v-15h-15z" aria-label="United States " />
-            <path d="M20.09-53.025h15v-15h-15z" aria-label="United States " />
-            <path d="M52.096-69.035h15v-15h-15z" aria-label="United States " />
-            <path d="M260.1 266.978h15v-15h-15z" aria-label="Mexico " />
-            <path d="M644.1 90.966h15v-15h-15z" aria-label="Ireland " />
-            <path d="M660.095 74.97h15v-15h-15z" aria-label="United Kingdom " />
-            <path d="M52.096 266.978h15v-15h-15z" aria-label="United States " />
-            <path d="M468.088-85.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M468.088-101.027h15v-15h-15z" aria-label="Greenland " />
-            <path d="M452.092-117.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M452.092-133.033h15v-15h-15z" aria-label="Greenland " />
-            <path d="M404.09-149.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M420.086-165.024h15v-15h-15z" aria-label="Greenland " />
-            <path d="M388.094-181.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M404.09-197.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M420.086-213.026h15v-15h-15z" aria-label="Greenland " />
-            <path d="M420.086-229.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M420.086-245.032h15v-15h-15z" aria-label="Greenland " />
-            <path d="M436.096-261.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M452.092-277.024h15v-15h-15z" aria-label="Greenland " />
-            <path d="M500.094-293.034h15v-15h-15z" aria-label="Greenland " />
-            <path d="M516.09-309.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M356.088 154.979h15v-15h-15z" aria-label="Canada " />
-            <path d="M420.086 138.968h15v-15h-15z" aria-label="Canada " />
-            <path d="M340.093 122.972h15v-15h-15z" aria-label="Canada " />
-            <path d="M164.095 74.97h15v-15h-15z" aria-label="Canada " />
-            <path d="M148.1 58.975h15v-15h-15z" aria-label="Canada " />
-            <path d="M180.091 42.979h15v-15h-15z" aria-label="Canada " />
-            <path d="M148.1 42.979h15v-15h-15z" aria-label="Canada " />
-            <path d="M116.094 10.973h15v-15h-15z" aria-label="Canada " />
-            <path d="M116.094-5.023h15v-15h-15z" aria-label="Canada " />
-            <path d="M116.094-21.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M116.094-37.029h15v-15h-15z" aria-label="Canada " />
-            <path d="M148.1-53.025h15v-15h-15z" aria-label="Canada " />
-            <path d="M180.091-69.035h15v-15h-15z" aria-label="Canada " />
-            <path d="M340.093-85.03h15v-15h-15z" aria-label="Canada " />
-            <path d="M436.096 138.968h15v-15h-15z" aria-label="Canada " />
-            <path d="M388.094 138.968h15v-15h-15z" aria-label="Canada " />
-            <path d="M356.088 138.968h15v-15h-15z" aria-label="Canada " />
-            <path d="M372.099 138.968h15v-15h-15z" aria-label="Canada " />
-            <path d="M452.092 122.972h15v-15h-15z" aria-label="Canada " />
-            <path d="M404.09 122.972h15v-15h-15z" aria-label="Canada " />
-            <path d="M388.094 122.972h15v-15h-15z" aria-label="Canada " />
-            <path d="M372.099 122.972h15v-15h-15z" aria-label="Canada " />
-            <path d="M356.088 122.972h15v-15h-15z" aria-label="Canada " />
-            <path d="M452.092 106.977h15v-15h-15z" aria-label="Canada " />
-            <path d="M676.091 122.972h15v-15h-15z" aria-label="France " />
-            <path d="M436.096 106.977h15v-15h-15z" aria-label="Canada " />
-            <path d="M420.086 106.977h15v-15h-15z" aria-label="Canada " />
-            <path d="M404.09 106.977h15v-15h-15z" aria-label="Canada " />
-            <path d="M388.094 106.977h15v-15h-15z" aria-label="Canada " />
-            <path d="M372.099 106.977h15v-15h-15z" aria-label="Canada " />
-            <path d="M356.088 106.977h15v-15h-15z" aria-label="Canada " />
-            <path d="M340.093 106.977h15v-15h-15z" aria-label="Canada " />
-            <path d="M324.097 106.977h15v-15h-15z" aria-label="Canada " />
-            <path d="M308.087 106.977h15v-15h-15z" aria-label="Canada " />
-            <path d="M292.09 106.977h15v-15h-15z" aria-label="Canada " />
-            <path d="M276.095 106.977h15v-15h-15z" aria-label="Canada " />
-            <path d="M260.1 106.977h15v-15h-15z" aria-label="Canada " />
-            <path d="M244.089 106.977h15v-15h-15z" aria-label="Canada " />
-            <path d="M228.093 106.977h15v-15h-15z" aria-label="Canada " />
-            <path d="M212.097 106.977h15v-15h-15z" aria-label="Canada " />
-            <path d="M196.087 106.977h15v-15h-15z" aria-label="Canada " />
-            <path d="M180.091 106.977h15v-15h-15z" aria-label="Canada " />
-            <path d="M164.095 106.977h15v-15h-15z" aria-label="Canada " />
-            <path d="M452.092 90.966h15v-15h-15z" aria-label="Canada " />
-            <path d="M436.096 90.966h15v-15h-15z" aria-label="Canada " />
-            <path d="M420.086 90.966h15v-15h-15z" aria-label="Canada " />
-            <path d="M404.09 90.966h15v-15h-15z" aria-label="Canada " />
-            <path d="M388.094 90.966h15v-15h-15z" aria-label="Canada " />
-            <path d="M372.099 90.966h15v-15h-15z" aria-label="Canada " />
-            <path d="M340.093 90.966h15v-15h-15z" aria-label="Canada " />
-            <path d="M324.097 90.966h15v-15h-15z" aria-label="Canada " />
-            <path d="M308.087 90.966h15v-15h-15z" aria-label="Canada " />
-            <path d="M292.09 90.966h15v-15h-15z" aria-label="Canada " />
-            <path d="M276.095 90.966h15v-15h-15z" aria-label="Canada " />
-            <path d="M260.1 90.966h15v-15h-15z" aria-label="Canada " />
-            <path d="M244.089 90.966h15v-15h-15z" aria-label="Canada " />
-            <path d="M228.093 90.966h15v-15h-15z" aria-label="Canada " />
-            <path d="M212.097 90.966h15v-15h-15z" aria-label="Canada " />
-            <path d="M196.087 90.966h15v-15h-15z" aria-label="Canada " />
-            <path d="M180.091 90.966h15v-15h-15z" aria-label="Canada " />
-            <path d="M164.095 90.966h15v-15h-15z" aria-label="Canada " />
-            <path d="M436.096 74.97h15v-15h-15z" aria-label="Canada " />
-            <path d="M420.086 74.97h15v-15h-15z" aria-label="Canada " />
-            <path d="M404.09 74.97h15v-15h-15z" aria-label="Canada " />
-            <path d="M388.094 74.97h15v-15h-15z" aria-label="Canada " />
-            <path d="M372.099 74.97h15v-15h-15z" aria-label="Canada " />
-            <path d="M324.097 74.97h15v-15h-15z" aria-label="Canada " />
-            <path d="M308.087 74.97h15v-15h-15z" aria-label="Canada " />
-            <path d="M292.09 74.97h15v-15h-15z" aria-label="Canada " />
-            <path d="M276.095 74.97h15v-15h-15z" aria-label="Canada " />
-            <path d="M260.1 74.97h15v-15h-15z" aria-label="Canada " />
-            <path d="M244.089 74.97h15v-15h-15z" aria-label="Canada " />
-            <path d="M228.093 74.97h15v-15h-15z" aria-label="Canada " />
-            <path d="M212.097 74.97h15v-15h-15z" aria-label="Canada " />
-            <path d="M196.087 74.97h15v-15h-15z" aria-label="Canada " />
-            <path d="M180.091 74.97h15v-15h-15z" aria-label="Canada " />
-            <path d="M420.086 58.975h15v-15h-15z" aria-label="Canada " />
-            <path d="M676.091 106.977h15v-15h-15z" aria-label="United Kingdom " />
-            <path d="M404.09 58.975h15v-15h-15z" aria-label="Canada " />
-            <path d="M388.094 58.975h15v-15h-15z" aria-label="Canada " />
-            <path d="M372.099 58.975h15v-15h-15z" aria-label="Canada " />
-            <path d="M292.09 58.975h15v-15h-15z" aria-label="Canada " />
-            <path d="M276.095 58.975h15v-15h-15z" aria-label="Canada " />
-            <path d="M260.1 58.975h15v-15h-15z" aria-label="Canada " />
-            <path d="M244.089 58.975h15v-15h-15z" aria-label="Canada " />
-            <path d="M228.093 58.975h15v-15h-15z" aria-label="Canada " />
-            <path d="M212.097 58.975h15v-15h-15z" aria-label="Canada " />
-            <path d="M196.087 58.975h15v-15h-15z" aria-label="Canada " />
-            <path d="M180.091 58.975h15v-15h-15z" aria-label="Canada " />
-            <path d="M164.095 58.975h15v-15h-15z" aria-label="Canada " />
-            <path d="M420.086 42.979h15v-15h-15z" aria-label="Canada " />
-            <path d="M660.095 58.975h15v-15h-15z" aria-label="United Kingdom " />
-            <path d="M388.094 42.979h15v-15h-15z" aria-label="Canada " />
-            <path d="M372.099 42.979h15v-15h-15z" aria-label="Canada " />
-            <path d="M292.09 42.979h15v-15h-15z" aria-label="Canada " />
-            <path d="M276.095 42.979h15v-15h-15z" aria-label="Canada " />
-            <path d="M260.1 42.979h15v-15h-15z" aria-label="Canada " />
-            <path d="M244.089 42.979h15v-15h-15z" aria-label="Canada " />
-            <path d="M228.093 42.979h15v-15h-15z" aria-label="Canada " />
-            <path d="M212.097 42.979h15v-15h-15z" aria-label="Canada " />
-            <path d="M196.087 42.979h15v-15h-15z" aria-label="Canada " />
-            <path d="M164.095 42.979h15v-15h-15z" aria-label="Canada " />
-            <path d="M116.094 26.969h15v-15h-15z" aria-label="Canada " />
-            <path d="M388.094 26.969h15v-15h-15z" aria-label="Canada " />
-            <path d="M708.097 42.979h15v-15h-15z" aria-label="Norway " />
-            <path d="M372.099 26.969h15v-15h-15z" aria-label="Canada " />
-            <path d="M356.088 26.969h15v-15h-15z" aria-label="Canada " />
-            <path d="M292.09 26.969h15v-15h-15z" aria-label="Canada " />
-            <path d="M276.095 26.969h15v-15h-15z" aria-label="Canada " />
-            <path d="M260.1 26.969h15v-15h-15z" aria-label="Canada " />
-            <path d="M244.089 26.969h15v-15h-15z" aria-label="Canada " />
-            <path d="M228.093 26.969h15v-15h-15z" aria-label="Canada " />
-            <path d="M212.097 26.969h15v-15h-15z" aria-label="Canada " />
-            <path d="M196.087 26.969h15v-15h-15z" aria-label="Canada " />
-            <path d="M180.091 26.969h15v-15h-15z" aria-label="Canada " />
-            <path d="M164.095 26.969h15v-15h-15z" aria-label="Canada " />
-            <path d="M148.1 26.969h15v-15h-15z" aria-label="Canada " />
-            <path d="M132.09 26.969h15v-15h-15z" aria-label="Canada " />
-            <path d="M404.09 10.973h15v-15h-15z" aria-label="Canada " />
-            <path d="M484.098 26.969h15v-15h-15z" aria-label="Greenland " />
-            <path d="M340.093 10.973h15v-15h-15z" aria-label="Canada " />
-            <path d="M308.087 10.973h15v-15h-15z" aria-label="Canada " />
-            <path d="M292.09 10.973h15v-15h-15z" aria-label="Canada " />
-            <path d="M276.095 10.973h15v-15h-15z" aria-label="Canada " />
-            <path d="M260.1 10.973h15v-15h-15z" aria-label="Canada " />
-            <path d="M244.089 10.973h15v-15h-15z" aria-label="Canada " />
-            <path d="M228.093 10.973h15v-15h-15z" aria-label="Canada " />
-            <path d="M212.097 10.973h15v-15h-15z" aria-label="Canada " />
-            <path d="M196.087 10.973h15v-15h-15z" aria-label="Canada " />
-            <path d="M180.091 10.973h15v-15h-15z" aria-label="Canada " />
-            <path d="M164.095 10.973h15v-15h-15z" aria-label="Canada " />
-            <path d="M148.1 10.973h15v-15h-15z" aria-label="Canada " />
-            <path d="M132.09 10.973h15v-15h-15z" aria-label="Canada " />
-            <path d="M420.086-5.023h15v-15h-15z" aria-label="Canada " />
-            <path d="M484.098 10.973h15v-15h-15z" aria-label="Greenland " />
-            <path d="M404.09-5.023h15v-15h-15z" aria-label="Canada " />
-            <path d="M388.094-5.023h15v-15h-15z" aria-label="Canada " />
-            <path d="M372.099-5.023h15v-15h-15z" aria-label="Canada " />
-            <path d="M340.093-5.023h15v-15h-15z" aria-label="Canada " />
-            <path d="M324.097-5.023h15v-15h-15z" aria-label="Canada " />
-            <path d="M308.087-5.023h15v-15h-15z" aria-label="Canada " />
-            <path d="M292.09-5.023h15v-15h-15z" aria-label="Canada " />
-            <path d="M276.095-5.023h15v-15h-15z" aria-label="Canada " />
-            <path d="M260.1-5.023h15v-15h-15z" aria-label="Canada " />
-            <path d="M244.089-5.023h15v-15h-15z" aria-label="Canada " />
-            <path d="M228.093-5.023h15v-15h-15z" aria-label="Canada " />
-            <path d="M212.097-5.023h15v-15h-15z" aria-label="Canada " />
-            <path d="M196.087-5.023h15v-15h-15z" aria-label="Canada " />
-            <path d="M180.091-5.023h15v-15h-15z" aria-label="Canada " />
-            <path d="M164.095-5.023h15v-15h-15z" aria-label="Canada " />
-            <path d="M148.1-5.023h15v-15h-15z" aria-label="Canada " />
-            <path d="M132.09-5.023h15v-15h-15z" aria-label="Canada " />
-            <path d="M420.086-21.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M484.098-5.023h15v-15h-15z" aria-label="Greenland " />
-            <path d="M404.09-21.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M388.094-21.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M340.093-21.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M324.097-21.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M308.087-21.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M292.09-21.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M276.095-21.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M260.1-21.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M244.089-21.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M228.093-21.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M212.097-21.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M196.087-21.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M180.091-21.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M164.095-21.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M148.1-21.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M132.09-21.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M404.09-37.029h15v-15h-15z" aria-label="Canada " />
-            <path d="M468.088-21.033h15v-15h-15z" aria-label="Greenland " />
-            <path d="M388.094-37.029h15v-15h-15z" aria-label="Canada " />
-            <path d="M340.093-37.029h15v-15h-15z" aria-label="Canada " />
-            <path d="M324.097-37.029h15v-15h-15z" aria-label="Canada " />
-            <path d="M308.087-37.029h15v-15h-15z" aria-label="Canada " />
-            <path d="M244.089-37.029h15v-15h-15z" aria-label="Canada " />
-            <path d="M212.097-37.029h15v-15h-15z" aria-label="Canada " />
-            <path d="M196.087-37.029h15v-15h-15z" aria-label="Canada " />
-            <path d="M180.091-37.029h15v-15h-15z" aria-label="Canada " />
-            <path d="M164.095-37.029h15v-15h-15z" aria-label="Canada " />
-            <path d="M148.1-37.029h15v-15h-15z" aria-label="Canada " />
-            <path d="M132.09-37.029h15v-15h-15z" aria-label="Canada " />
-            <path d="M404.09-53.025h15v-15h-15z" aria-label="Canada " />
-            <path d="M468.088-37.029h15v-15h-15z" aria-label="Greenland " />
-            <path d="M388.094-53.025h15v-15h-15z" aria-label="Canada " />
-            <path d="M372.099-53.025h15v-15h-15z" aria-label="Canada " />
-            <path d="M340.093-53.025h15v-15h-15z" aria-label="Canada " />
-            <path d="M308.087-53.025h15v-15h-15z" aria-label="Canada " />
-            <path d="M260.1-53.025h15v-15h-15z" aria-label="Canada " />
-            <path d="M244.089-53.025h15v-15h-15z" aria-label="Canada " />
-            <path d="M228.093-53.025h15v-15h-15z" aria-label="Canada " />
-            <path d="M212.097-53.025h15v-15h-15z" aria-label="Canada " />
-            <path d="M164.095-53.025h15v-15h-15z" aria-label="Canada " />
-            <path d="M388.094-69.035h15v-15h-15z" aria-label="Canada " />
-            <path d="M468.088-53.025h15v-15h-15z" aria-label="Greenland " />
-            <path d="M372.099-69.035h15v-15h-15z" aria-label="Canada " />
-            <path d="M356.088-69.035h15v-15h-15z" aria-label="Canada " />
-            <path d="M340.093-69.035h15v-15h-15z" aria-label="Canada " />
-            <path d="M324.097-69.035h15v-15h-15z" aria-label="Canada " />
-            <path d="M292.09-69.035h15v-15h-15z" aria-label="Canada " />
-            <path d="M244.089-69.035h15v-15h-15z" aria-label="Canada " />
-            <path d="M228.093-69.035h15v-15h-15z" aria-label="Canada " />
-            <path d="M212.097-69.035h15v-15h-15z" aria-label="Canada " />
-            <path d="M372.099-85.03h15v-15h-15z" aria-label="Canada " />
-            <path d="M468.088-69.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M324.097-85.03h15v-15h-15z" aria-label="Canada " />
-            <path d="M276.095-85.03h15v-15h-15z" aria-label="Canada " />
-            <path d="M244.089-85.03h15v-15h-15z" aria-label="Canada " />
-            <path d="M228.093-85.03h15v-15h-15z" aria-label="Canada " />
-            <path d="M212.097-85.03h15v-15h-15z" aria-label="Canada " />
-            <path d="M196.087-85.03h15v-15h-15z" aria-label="Canada " />
-            <path d="M180.091-85.03h15v-15h-15z" aria-label="Canada " />
-            <path d="M356.088-101.027h15v-15h-15z" aria-label="Canada " />
-            <path d="M340.093-101.027h15v-15h-15z" aria-label="Canada " />
-            <path d="M324.097-101.027h15v-15h-15z" aria-label="Canada " />
-            <path d="M308.087-101.027h15v-15h-15z" aria-label="Canada " />
-            <path d="M292.09-101.027h15v-15h-15z" aria-label="Canada " />
-            <path d="M276.095-101.027h15v-15h-15z" aria-label="Canada " />
-            <path d="M212.097-101.027h15v-15h-15z" aria-label="Canada " />
-            <path d="M196.087-101.027h15v-15h-15z" aria-label="Canada " />
-            <path d="M180.091-101.027h15v-15h-15z" aria-label="Canada " />
-            <path d="M340.093-117.022h15v-15h-15z" aria-label="Canada " />
-            <path d="M324.097-117.022h15v-15h-15z" aria-label="Canada " />
-            <path d="M228.093-117.022h15v-15h-15z" aria-label="Canada " />
-            <path d="M340.093-133.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M324.097-133.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M308.087-133.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M276.095-133.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M244.089-133.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M228.093-133.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M212.097-133.033h15v-15h-15z" aria-label="Canada " />
-            <path d="M356.088-149.028h15v-15h-15z" aria-label="Canada " />
-            <path d="M340.093-149.028h15v-15h-15z" aria-label="Canada " />
-            <path d="M324.097-149.028h15v-15h-15z" aria-label="Canada " />
-            <path d="M308.087-149.028h15v-15h-15z" aria-label="Canada " />
-            <path d="M292.09-149.028h15v-15h-15z" aria-label="Canada " />
-            <path d="M276.095-149.028h15v-15h-15z" aria-label="Canada " />
-            <path d="M196.087-149.028h15v-15h-15z" aria-label="Canada " />
-            <path d="M356.088-165.024h15v-15h-15z" aria-label="Canada " />
-            <path d="M340.093-165.024h15v-15h-15z" aria-label="Canada " />
-            <path d="M324.097-165.024h15v-15h-15z" aria-label="Canada " />
-            <path d="M196.087-165.024h15v-15h-15z" aria-label="Canada " />
-            <path d="M372.099-181.035h15v-15h-15z" aria-label="Canada " />
-            <path d="M356.088-181.035h15v-15h-15z" aria-label="Canada " />
-            <path d="M340.093-181.035h15v-15h-15z" aria-label="Canada " />
-            <path d="M292.09-181.035h15v-15h-15z" aria-label="Canada " />
-            <path d="M276.095-181.035h15v-15h-15z" aria-label="Canada " />
-            <path d="M372.099-197.03h15v-15h-15z" aria-label="Canada " />
-            <path d="M356.088-197.03h15v-15h-15z" aria-label="Canada " />
-            <path d="M340.093-197.03h15v-15h-15z" aria-label="Canada " />
-            <path d="M324.097-197.03h15v-15h-15z" aria-label="Canada " />
-            <path d="M308.087-197.03h15v-15h-15z" aria-label="Canada " />
-            <path d="M260.1-197.03h15v-15h-15z" aria-label="Canada " />
-            <path d="M388.094-213.026h15v-15h-15z" aria-label="Canada " />
-            <path d="M372.099-213.026h15v-15h-15z" aria-label="Canada " />
-            <path d="M356.088-213.026h15v-15h-15z" aria-label="Canada " />
-            <path d="M340.093-213.026h15v-15h-15z" aria-label="Canada " />
-            <path d="M324.097-213.026h15v-15h-15z" aria-label="Canada " />
-            <path d="M308.087-213.026h15v-15h-15z" aria-label="Canada " />
-            <path d="M292.09-213.026h15v-15h-15z" aria-label="Canada " />
-            <path d="M388.094-229.022h15v-15h-15z" aria-label="Canada " />
-            <path d="M372.099-229.022h15v-15h-15z" aria-label="Canada " />
-            <path d="M356.088-229.022h15v-15h-15z" aria-label="Canada " />
-            <path d="M308.087-229.022h15v-15h-15z" aria-label="Canada " />
-            <path d="M292.09-229.022h15v-15h-15z" aria-label="Canada " />
-            <path d="M404.09-245.032h15v-15h-15z" aria-label="Canada " />
-            <path d="M388.094-245.032h15v-15h-15z" aria-label="Canada " />
-            <path d="M372.099-245.032h15v-15h-15z" aria-label="Canada " />
-            <path d="M356.088-245.032h15v-15h-15z" aria-label="Canada " />
-            <path d="M340.093-245.032h15v-15h-15z" aria-label="Canada " />
-            <path d="M324.097-245.032h15v-15h-15z" aria-label="Canada " />
-            <path d="M308.087-245.032h15v-15h-15z" aria-label="Canada " />
-            <path d="M404.09-261.028h15v-15h-15z" aria-label="Canada " />
-            <path d="M388.094-261.028h15v-15h-15z" aria-label="Canada " />
-            <path d="M372.099-261.028h15v-15h-15z" aria-label="Canada " />
-            <path d="M356.088-261.028h15v-15h-15z" aria-label="Canada " />
-            <path d="M340.093-261.028h15v-15h-15z" aria-label="Canada " />
-            <path d="M324.097-261.028h15v-15h-15z" aria-label="Canada " />
-            <path d="M420.086-277.024h15v-15h-15z" aria-label="Canada " />
-            <path d="M404.09-277.024h15v-15h-15z" aria-label="Canada " />
-            <path d="M388.094-277.024h15v-15h-15z" aria-label="Canada " />
-            <path d="M372.099-277.024h15v-15h-15z" aria-label="Canada " />
-            <path d="M356.088-277.024h15v-15h-15z" aria-label="Canada " />
-            <path d="M340.093-277.024h15v-15h-15z" aria-label="Canada " />
-            <path d="M324.097-277.024h15v-15h-15z" aria-label="Canada " />
-            <path d="M420.086-293.034h15v-15h-15z" aria-label="Canada " />
-            <path d="M404.09-293.034h15v-15h-15z" aria-label="Canada " />
-            <path d="M388.094-293.034h15v-15h-15z" aria-label="Canada " />
-            <path d="M372.099-293.034h15v-15h-15z" aria-label="Canada " />
-            <path d="M356.088-293.034h15v-15h-15z" aria-label="Canada " />
-            <path d="M388.094-309.03h15v-15h-15z" aria-label="Canada " />
-            <path d="M372.099-309.03h15v-15h-15z" aria-label="Canada " />
-            <path d="M692.087 138.968h15v-15h-15z" aria-label="France " />
-            <path d="M1076.087 154.979h15v-15h-15z" aria-label="Mongolia " />
-            <path d="M900.09 138.968h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M708.097 138.968h15v-15h-15z" aria-label="France " />
-            <path d="M1284.09 378.978h15v-15h-15z" aria-label="Papua New Guinea " />
-            <path d="M692.087 122.972h15v-15h-15z" aria-label="France " />
-            <path d="M1092.098 106.977h15v-15h-15z" aria-label="Mongolia " />
-            <path d="M948.092 106.977h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M884.094 106.977h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M692.087 106.977h15v-15h-15z" aria-label="France " />
-            <path d="M948.092 90.966h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M676.091 90.966h15v-15h-15z" aria-label="United Kingdom " />
-            <path d="M740.089 74.97h15v-15h-15z" aria-label="Sweden " />
-            <path d="M724.093 58.975h15v-15h-15z" aria-label="Denmark " />
-            <path d="M724.093 42.979h15v-15h-15z" aria-label="Norway " />
-            <path d="M500.094 26.969h15v-15h-15z" aria-label="Greenland " />
-            <path d="M500.094 10.973h15v-15h-15z" aria-label="Greenland " />
-            <path d="M500.094-5.023h15v-15h-15z" aria-label="Greenland " />
-            <path d="M484.098-37.029h15v-15h-15z" aria-label="Greenland " />
-            <path d="M484.098-53.025h15v-15h-15z" aria-label="Greenland " />
-            <path d="M484.098-69.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M484.098-85.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M484.098-101.027h15v-15h-15z" aria-label="Greenland " />
-            <path d="M468.088-117.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M468.088-133.033h15v-15h-15z" aria-label="Greenland " />
-            <path d="M420.086-149.028h15v-15h-15z" aria-label="Greenland " />
-            <path d="M436.096-165.024h15v-15h-15z" aria-label="Greenland " />
-            <path d="M404.09-181.035h15v-15h-15z" aria-label="Greenland " />
-            <path d="M420.086-197.03h15v-15h-15z" aria-label="Greenland " />
-            <path d="M436.096-213.026h15v-15h-15z" aria-label="Greenland " />
-            <path d="M436.096-229.022h15v-15h-15z" aria-label="Greenland " />
-            <path d="M868.099 154.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1204.097 106.977h15v-15h-15z" aria-label="Russia " />
-            <path d="M1108.093 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M996.094-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1236.089 138.968h15v-15h-15z" aria-label="Russia " />
-            <path d="M868.099 138.968h15v-15h-15z" aria-label="Russia " />
-            <path d="M852.088 138.968h15v-15h-15z" aria-label="Russia " />
-            <path d="M836.093 138.968h15v-15h-15z" aria-label="Russia " />
-            <path d="M1252.099 122.972h15v-15h-15z" aria-label="Russia " />
-            <path d="M1236.089 122.972h15v-15h-15z" aria-label="Russia " />
-            <path d="M1220.093 122.972h15v-15h-15z" aria-label="Russia " />
-            <path d="M868.099 122.972h15v-15h-15z" aria-label="Russia " />
-            <path d="M852.088 122.972h15v-15h-15z" aria-label="Russia " />
-            <path d="M1252.099 106.977h15v-15h-15z" aria-label="Russia " />
-            <path d="M1236.089 106.977h15v-15h-15z" aria-label="Russia " />
-            <path d="M1220.093 106.977h15v-15h-15z" aria-label="Russia " />
-            <path d="M1156.095 106.977h15v-15h-15z" aria-label="Russia " />
-            <path d="M884.094 122.972h15v-15h-15z" aria-label="Kazakhstan " />
-            <path d="M1140.1 106.977h15v-15h-15z" aria-label="Russia " />
-            <path d="M1124.09 106.977h15v-15h-15z" aria-label="Russia " />
-            <path d="M1108.093 106.977h15v-15h-15z" aria-label="Russia " />
-            <path d="M1076.087 106.977h15v-15h-15z" aria-label="Russia " />
-            <path d="M1060.092 106.977h15v-15h-15z" aria-label="Russia " />
-            <path d="M1044.096 106.977h15v-15h-15z" aria-label="Russia " />
-            <path d="M1028.1 106.977h15v-15h-15z" aria-label="Russia " />
-            <path d="M932.096 106.977h15v-15h-15z" aria-label="Russia " />
-            <path d="M868.099 106.977h15v-15h-15z" aria-label="Russia " />
-            <path d="M852.088 106.977h15v-15h-15z" aria-label="Russia " />
-            <path d="M836.093 106.977h15v-15h-15z" aria-label="Russia " />
-            <path d="M1332.092 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M1316.097 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M1252.099 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M1236.089 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M1220.093 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M1204.097 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M1188.087 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M1172.091 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M1156.095 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M1140.1 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M1124.09 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M1108.093 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M1092.098 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M1076.087 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M1060.092 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M1044.096 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M1028.1 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M1012.09 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M932.096 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M916.086 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M900.09 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M884.094 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M868.099 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M852.088 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M836.093 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M820.097 90.966h15v-15h-15z" aria-label="Russia " />
-            <path d="M1332.092 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M1316.097 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M1236.089 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M1220.093 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M1204.097 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M1188.087 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M1172.091 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M1156.095 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M1140.1 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M1124.09 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M1108.093 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M1092.098 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M1076.087 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M1060.092 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M1044.096 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M1028.1 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M1012.09 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M996.094 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M980.098 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M964.088 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M948.092 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M932.096 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M916.086 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M900.09 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M884.094 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M868.099 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M852.088 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M836.093 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M820.097 74.97h15v-15h-15z" aria-label="Russia " />
-            <path d="M1332.092 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M1252.099 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M1236.089 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M1220.093 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M1204.097 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M1188.087 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M1172.091 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M1156.095 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M1140.1 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M1124.09 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M1092.098 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M1076.087 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M1060.092 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M1044.096 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M1028.1 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M1012.09 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M996.094 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M980.098 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M964.088 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M948.092 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M932.096 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M916.086 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M900.09 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M884.094 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M868.099 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M852.088 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M836.093 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M820.097 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M804.086 58.975h15v-15h-15z" aria-label="Russia " />
-            <path d="M1348.088 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1300.086 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1284.09 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1268.095 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1252.099 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1236.089 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1220.093 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1204.097 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1188.087 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1172.091 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1156.095 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1140.1 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1124.09 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1108.093 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1092.098 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1076.087 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1060.092 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1044.096 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1028.1 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1012.09 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M996.094 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M980.098 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M964.088 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M948.092 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M932.096 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M916.086 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M900.09 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M884.094 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M868.099 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M852.088 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M836.093 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M820.097 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M804.086 42.979h15v-15h-15z" aria-label="Russia " />
-            <path d="M1380.094 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1364.099 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1332.092 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1316.097 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1300.086 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1284.09 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1268.095 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1252.099 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1236.089 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1220.093 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1204.097 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1188.087 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1172.091 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1156.095 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1140.1 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1124.09 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1108.093 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1092.098 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1076.087 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1060.092 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1044.096 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1028.1 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1012.09 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M996.094 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M980.098 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M964.088 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M948.092 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M932.096 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M916.086 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M900.09 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M884.094 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M868.099 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M852.088 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M836.093 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M820.097 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M804.086 26.969h15v-15h-15z" aria-label="Russia " />
-            <path d="M1396.09 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1380.094 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1364.099 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1348.088 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1332.092 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1316.097 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1300.086 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1284.09 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1268.095 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1252.099 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1236.089 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1220.093 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1204.097 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1188.087 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1172.091 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1156.095 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1140.1 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1124.09 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1108.093 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1092.098 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1076.087 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1060.092 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1044.096 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1028.1 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1012.09 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M996.094 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M980.098 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M964.088 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M948.092 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M932.096 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M916.086 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M900.09 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M884.094 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M868.099 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M852.088 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M836.093 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M820.097 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M804.086 10.973h15v-15h-15z" aria-label="Russia " />
-            <path d="M1444.092-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1412.086-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1396.09-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1380.094-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1364.099-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1348.088-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1332.092-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1316.097-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1300.086-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1284.09-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1268.095-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1252.099-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1236.089-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1220.093-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1204.097-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1188.087-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1172.091-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1156.095-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1140.1-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1124.09-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1108.093-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1092.098-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1076.087-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1060.092-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1044.096-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1028.1-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1012.09-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M996.094-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M980.098-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M964.088-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M948.092-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M932.096-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M916.086-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M900.09-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M884.094-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M868.099-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M852.088-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M820.097-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M804.086-5.023h15v-15h-15z" aria-label="Russia " />
-            <path d="M1444.092-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1428.096-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1412.086-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1396.09-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1380.094-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1364.099-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1348.088-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1332.092-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1316.097-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1300.086-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1284.09-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1268.095-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1252.099-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1236.089-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1220.093-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1204.097-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1188.087-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1172.091-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1156.095-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1140.1-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1124.09-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1108.093-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1092.098-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1076.087-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1060.092-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1044.096-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1028.1-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1012.09-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M964.088-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M484.098-21.033h15v-15h-15z" aria-label="Greenland " />
-            <path d="M948.092-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M932.096-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M916.086-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M900.09-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M884.094-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M868.099-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M836.093-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M820.097-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M804.086-21.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1412.086-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1396.09-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1380.094-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1364.099-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1348.088-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1332.092-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1316.097-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1300.086-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1284.09-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1268.095-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1252.099-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1236.089-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1220.093-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1204.097-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1188.087-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1172.091-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1156.095-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1140.1-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1124.09-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1108.093-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1092.098-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1076.087-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1060.092-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1044.096-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1028.1-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1012.09-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M996.094-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M980.098-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M964.088-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M948.092-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M932.096-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M916.086-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M900.09-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M868.099-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M836.093-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M820.097-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M804.086-37.029h15v-15h-15z" aria-label="Russia " />
-            <path d="M1396.09-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1380.094-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1332.092-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1316.097-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1300.086-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1284.09-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1268.095-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1252.099-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1236.089-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1220.093-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1204.097-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1188.087-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1172.091-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1156.095-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1140.1-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1124.09-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1108.093-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1092.098-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1076.087-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1060.092-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1044.096-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1028.1-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1012.09-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M996.094-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M964.088-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M932.096-53.025h15v-15h-15z" aria-label="Russia " />
-            <path d="M1412.086-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1300.086-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1284.09-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1268.095-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1252.099-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1236.089-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1220.093-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1204.097-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1188.087-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1172.091-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1156.095-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1140.1-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1124.09-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1108.093-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1092.098-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1076.087-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1060.092-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1044.096-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1028.1-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1012.09-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M996.094-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M964.088-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M900.09-69.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1284.09-85.03h15v-15h-15z" aria-label="Russia " />
-            <path d="M1268.095-85.03h15v-15h-15z" aria-label="Russia " />
-            <path d="M1252.099-85.03h15v-15h-15z" aria-label="Russia " />
-            <path d="M1204.097-85.03h15v-15h-15z" aria-label="Russia " />
-            <path d="M1188.087-85.03h15v-15h-15z" aria-label="Russia " />
-            <path d="M1172.091-85.03h15v-15h-15z" aria-label="Russia " />
-            <path d="M1156.095-85.03h15v-15h-15z" aria-label="Russia " />
-            <path d="M1140.1-85.03h15v-15h-15z" aria-label="Russia " />
-            <path d="M1124.09-85.03h15v-15h-15z" aria-label="Russia " />
-            <path d="M1108.093-85.03h15v-15h-15z" aria-label="Russia " />
-            <path d="M1092.098-85.03h15v-15h-15z" aria-label="Russia " />
-            <path d="M1076.087-85.03h15v-15h-15z" aria-label="Russia " />
-            <path d="M1060.092-85.03h15v-15h-15z" aria-label="Russia " />
-            <path d="M1044.096-85.03h15v-15h-15z" aria-label="Russia " />
-            <path d="M1028.1-85.03h15v-15h-15z" aria-label="Russia " />
-            <path d="M1012.09-85.03h15v-15h-15z" aria-label="Russia " />
-            <path d="M964.088-85.03h15v-15h-15z" aria-label="Russia " />
-            <path d="M900.09-85.03h15v-15h-15z" aria-label="Russia " />
-            <path d="M1252.099-101.027h15v-15h-15z" aria-label="Russia " />
-            <path d="M1188.087-101.027h15v-15h-15z" aria-label="Russia " />
-            <path d="M1156.095-101.027h15v-15h-15z" aria-label="Russia " />
-            <path d="M1140.1-101.027h15v-15h-15z" aria-label="Russia " />
-            <path d="M1124.09-101.027h15v-15h-15z" aria-label="Russia " />
-            <path d="M1108.093-101.027h15v-15h-15z" aria-label="Russia " />
-            <path d="M1092.098-101.027h15v-15h-15z" aria-label="Russia " />
-            <path d="M1076.087-101.027h15v-15h-15z" aria-label="Russia " />
-            <path d="M1060.092-101.027h15v-15h-15z" aria-label="Russia " />
-            <path d="M1044.096-101.027h15v-15h-15z" aria-label="Russia " />
-            <path d="M1028.1-101.027h15v-15h-15z" aria-label="Russia " />
-            <path d="M1012.09-101.027h15v-15h-15z" aria-label="Russia " />
-            <path d="M1124.09-117.022h15v-15h-15z" aria-label="Russia " />
-            <path d="M1108.093-117.022h15v-15h-15z" aria-label="Russia " />
-            <path d="M1092.098-117.022h15v-15h-15z" aria-label="Russia " />
-            <path d="M1076.087-117.022h15v-15h-15z" aria-label="Russia " />
-            <path d="M1060.092-117.022h15v-15h-15z" aria-label="Russia " />
-            <path d="M1044.096-117.022h15v-15h-15z" aria-label="Russia " />
-            <path d="M916.086-117.022h15v-15h-15z" aria-label="Russia " />
-            <path d="M1268.095-133.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1252.099-133.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1140.1-133.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1124.09-133.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1108.093-133.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1092.098-133.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1076.087-133.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1060.092-133.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M932.096-133.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M916.086-133.033h15v-15h-15z" aria-label="Russia " />
-            <path d="M1124.09-149.028h15v-15h-15z" aria-label="Russia " />
-            <path d="M1108.093-149.028h15v-15h-15z" aria-label="Russia " />
-            <path d="M1092.098-149.028h15v-15h-15z" aria-label="Russia " />
-            <path d="M948.092-149.028h15v-15h-15z" aria-label="Russia " />
-            <path d="M1108.093-165.024h15v-15h-15z" aria-label="Russia " />
-            <path d="M1092.098-181.035h15v-15h-15z" aria-label="Russia " />
-            <path d="M1092.098-197.03h15v-15h-15z" aria-label="Russia " />
-            <path d="M1076.087-197.03h15v-15h-15z" aria-label="Russia " />
-            <path d="M1076.087-213.026h15v-15h-15z" aria-label="Russia " />
-            <path d="M1060.092-213.026h15v-15h-15z" aria-label="Russia " />
-            <path d="M1076.087-229.022h15v-15h-15z" aria-label="Russia " />
-            <path d="M1060.092-229.022h15v-15h-15z" aria-label="Russia " />
-            <path d="M884.094-229.022h15v-15h-15z" aria-label="Russia " />
-            <path d="M1076.087-245.032h15v-15h-15z" aria-label="Russia " />
-            <path d="M900.09 154.979h15v-15h-15z" aria-label="Kazakhstan " />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(528 0)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(544 0)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(560 0)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(576 0)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 16)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(528 16)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(544 16)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(560 16)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(576 16)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(592 16)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 32)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 32)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 32)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(528 32)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(544 32)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 48)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 48)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 48)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 48)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 48)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(528 48)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(544 48)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(560 48)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(576 48)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(608 48)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(624 48)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 64)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 64)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 64)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 64)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 64)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 64)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(528 64)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(544 64)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(560 64)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(576 64)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(592 64)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(608 64)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 80)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 80)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 80)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 80)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 80)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(528 80)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(544 80)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(560 80)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(576 80)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(592 80)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(608 80)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 80)" className="Svalbard and Jan Mayen" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 80)" className="Svalbard and Jan Mayen" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 96)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 96)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 96)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 96)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 96)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(528 96)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(544 96)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(560 96)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(576 96)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(592 96)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 96)" className="Svalbard and Jan Mayen" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 96)" className="Svalbard and Jan Mayen" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 96)" className="Svalbard and Jan Mayen" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 112)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 112)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 112)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 112)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 112)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 112)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(528 112)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(544 112)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(560 112)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(576 112)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(592 112)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 112)" className="Svalbard and Jan Mayen" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 112)" className="Svalbard and Jan Mayen" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 128)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 128)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 128)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 128)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 128)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 128)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 128)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(528 128)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(544 128)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(560 128)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(576 128)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(592 128)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 128)" className="Svalbard and Jan Mayen" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 128)" className="Svalbard and Jan Mayen" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 128)" className="Svalbard and Jan Mayen" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 144)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 144)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 144)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 144)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 144)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(528 144)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(544 144)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(560 144)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(576 144)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(592 144)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 144)" className="Svalbard and Jan Mayen" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 160)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 160)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 160)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 160)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 160)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 160)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(528 160)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(544 160)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(560 160)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(576 160)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(592 160)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 176)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 176)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 176)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(528 176)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(544 176)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(560 176)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(576 176)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(592 176)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 192)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 192)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 192)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(528 192)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(544 192)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(560 192)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(576 192)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(592 192)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 208)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 208)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(528 208)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(544 208)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(560 208)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(576 208)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(592 208)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 224)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 224)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(528 224)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(544 224)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(560 224)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(576 224)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 240)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 240)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(528 240)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(544 240)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(560 240)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 240)" className="Norway" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 256)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 256)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(528 256)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(544 256)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(560 256)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(576 256)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 256)" className="Norway" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 256)" className="Norway" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 256)" className="Norway" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 272)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 272)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(528 272)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(544 272)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(560 272)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 272)" className="Sweden" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 272)" className="Sweden" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 272)" className="Finland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 288)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 288)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(528 288)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 288)" className="Norway" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 288)" className="Sweden" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 288)" className="Sweden" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 288)" className="Finland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 304)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(592 304)" className="Iceland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(608 304)" className="Iceland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 304)" className="Sweden" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 304)" className="Sweden" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 304)" className="Finland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(720 320)" className="Norway" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 320)" className="Sweden" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 320)" className="Sweden" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 320)" className="Finland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 320)" className="Finland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(704 336)" className="Norway" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(720 336)" className="Norway" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 336)" className="Sweden" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 336)" className="Finland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 336)" className="Finland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 352)" className="Sweden" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 352)" className="Sweden" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 368)" className="Sweden" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 368)" className="Latvia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 384)" className="Lithuania" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 384)" className="Lithuania" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 384)" className="Belarus" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(704 400)" className="Netherlands" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(720 400)" className="Germany" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 400)" className="Poland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 400)" className="Poland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 400)" className="Poland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 400)" className="Belarus" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 400)" className="Belarus" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 400)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(976 400)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 400)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(704 416)" className="Germany" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(720 416)" className="Germany" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 416)" className="Germany" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 416)" className="Poland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 416)" className="Poland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 416)" className="Ukraine" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 416)" className="Ukraine" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 416)" className="Ukraine" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 416)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 416)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 416)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(976 416)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 416)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 416)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(704 432)" className="France" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(720 432)" className="Germany" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 432)" className="Austria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 432)" className="Slovakia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 432)" className="Ukraine" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 432)" className="Ukraine" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 432)" className="Ukraine" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 432)" className="Ukraine" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 432)" className="Ukraine" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 432)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 432)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(928 432)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(944 432)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 432)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(976 432)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 432)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 432)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 432)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 432)" className="Mongolia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 432)" className="Mongolia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 432)" className="Mongolia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 432)" className="Mongolia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 432)" className="Mongolia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 432)" className="Mongolia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 432)" className="Mongolia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(720 448)" className="Italy" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 448)" className="Slovenia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 448)" className="Croatia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 448)" className="Romania" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 448)" className="Romania" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 448)" className="Ukraine" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 448)" className="Ukraine" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 448)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(928 448)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(944 448)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 448)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(976 448)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 448)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 448)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 448)" className="Mongolia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 448)" className="Mongolia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 448)" className="Mongolia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 448)" className="Mongolia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 448)" className="Mongolia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(656 464)" className="Spain" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(672 464)" className="Spain" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(688 464)" className="France" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 464)" className="Italy" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 464)" className="Croatia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 464)" className="Serbia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 464)" className="Bulgaria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 464)" className="Georgia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 464)" className="Uzbekistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(928 464)" className="Uzbekistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(944 464)" className="Uzbekistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 464)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(976 464)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 464)" className="Kyrgyzstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 464)" className="Mongolia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 464)" className="Mongolia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 464)" className="Mongolia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(672 480)" className="Spain" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 480)" className="Italy" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 480)" className="Greece" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 480)" className="Turkey" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 480)" className="Turkey" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 480)" className="Turkey" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 480)" className="Turkey" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 480)" className="Azerbaijan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 480)" className="Azerbaijan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 480)" className="Turkmenistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 480)" className="Turkmenistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(928 480)" className="Turkmenistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(944 480)" className="Uzbekistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 480)" className="Tajikistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(976 480)" className="Kyrgyzstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(688 496)" className="Algeria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(704 496)" className="Algeria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(720 496)" className="Tunisia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 496)" className="Greece" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 496)" className="Turkey" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 496)" className="Turkey" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 496)" className="Turkey" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 496)" className="Syria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 496)" className="Iran" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 496)" className="Iran" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 496)" className="Iran" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 496)" className="Iran" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(928 496)" className="Turkmenistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(944 496)" className="Afghanistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 496)" className="Afghanistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(976 496)" className="Pakistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(672 512)" className="Morocco" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(688 512)" className="Algeria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(704 512)" className="Algeria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(720 512)" className="Tunisia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 512)" className="Syria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 512)" className="Iraq" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 512)" className="Iran" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 512)" className="Iran" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 512)" className="Iran" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 512)" className="Iran" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(928 512)" className="Afghanistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(944 512)" className="Afghanistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 512)" className="Afghanistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(976 512)" className="Pakistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 528)" className="Mexico" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 528)" className="Mexico" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(656 528)" className="Morocco" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(672 528)" className="Algeria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(688 528)" className="Algeria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(704 528)" className="Algeria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 528)" className="Egypt" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 528)" className="Egypt" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 528)" className="Saudi Arabia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 528)" className="Saudi Arabia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 528)" className="Iraq" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 528)" className="Iran" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 528)" className="Iran" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 528)" className="Iran" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(928 528)" className="Afghanistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(944 528)" className="Afghanistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 528)" className="Pakistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(976 528)" className="Pakistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 544)" className="Mexico" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 544)" className="Mexico" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 544)" className="Mexico" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(640 544)" className="Western Sahara" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(656 544)" className="Algeria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(672 544)" className="Algeria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(688 544)" className="Algeria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(704 544)" className="Algeria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 544)" className="Egypt" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 544)" className="Egypt" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 544)" className="Saudi Arabia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 544)" className="Saudi Arabia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 544)" className="Saudi Arabia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 544)" className="Saudi Arabia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 544)" className="Iran" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 544)" className="Iran" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(928 544)" className="Iran" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(944 544)" className="Pakistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 544)" className="Pakistan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 560)" className="Cuba" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(624 560)" className="Western Sahara" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(640 560)" className="Mauritania" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(656 560)" className="Mali" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(672 560)" className="Algeria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(688 560)" className="Algeria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(704 560)" className="Algeria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(720 560)" className="Algeria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 560)" className="Egypt" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 560)" className="Egypt" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 560)" className="Saudi Arabia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 560)" className="Saudi Arabia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 560)" className="Saudi Arabia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 560)" className="United Arab Emirates" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 560)" className="Oman" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 576)" className="Mexico" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 576)" className="Mexico" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 576)" className="Haiti" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(624 576)" className="Mauritania" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(640 576)" className="Mauritania" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(656 576)" className="Mali" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(672 576)" className="Mali" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(688 576)" className="Mali" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(704 576)" className="Niger" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(720 576)" className="Niger" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 576)" className="Niger" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 576)" className="Chad" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 576)" className="Chad" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 576)" className="Saudi Arabia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 576)" className="Saudi Arabia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 576)" className="Saudi Arabia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 576)" className="Oman" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 592)" className="Mexico" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 592)" className="Honduras" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 592)" className="Honduras" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(624 592)" className="Senegal" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(640 592)" className="Mauritania" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(656 592)" className="Mauritania" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(672 592)" className="Mali" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(688 592)" className="Niger" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(704 592)" className="Niger" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(720 592)" className="Niger" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 592)" className="Chad" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 592)" className="Chad" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 592)" className="Chad" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 592)" className="Yemen" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 592)" className="Yemen" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 592)" className="Thailand" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 592)" className="Vietnam" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 592)" className="Philippines" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 608)" className="Nicaragua" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 608)" className="Colombia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(624 608)" className="Guinea" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(640 608)" className="Guinea" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(656 608)" className="Mali" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(672 608)" className="Burkina Faso" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(688 608)" className="Benin" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 608)" className="Chad" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 608)" className="Ethiopia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 608)" className="Somalia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 608)" className="Vietnam" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 624)" className="Panama" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 624)" className="Colombia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 624)" className="Venezuela" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 624)" className="Venezuela" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 624)" className="Venezuela" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 624)" className="Venezuela" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(640 624)" className="Liberia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(656 624)" className="Côte d'Ivoire" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(672 624)" className="Ghana" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(688 624)" className="Benin" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 624)" className="Chad" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 624)" className="Central African Republic" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 624)" className="South Sudan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 624)" className="South Sudan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 624)" className="Ethiopia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 624)" className="Ethiopia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 624)" className="Ethiopia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 624)" className="Ethiopia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 624)" className="Somalia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 624)" className="Sri Lanka" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 624)" className="Philippines" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 640)" className="Colombia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 640)" className="Colombia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 640)" className="Colombia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 640)" className="Venezuela" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 640)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 640)" className="Suriname" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 640)" className="French Guiana" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(720 640)" className="Cameroon" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 640)" className="Cameroon" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 640)" className="Central African Republic" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 640)" className="Central African Republic" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 640)" className="Democratic Republic of Congo" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 640)" className="South Sudan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 640)" className="Uganda" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 640)" className="Ethiopia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 640)" className="Ethiopia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 640)" className="Somalia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 640)" className="Indonesia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 640)" className="Malaysia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 640)" className="Indonesia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 656)" className="Ecuador" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 656)" className="Ecuador" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 656)" className="Colombia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 656)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 656)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 656)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 656)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 656)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 656)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(720 656)" className="Gabon" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 656)" className="Republic of Congo" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 656)" className="Democratic Republic of Congo" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 656)" className="Democratic Republic of Congo" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 656)" className="Democratic Republic of Congo" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 656)" className="Uganda" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 656)" className="Uganda" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 656)" className="Kenya" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 656)" className="Somalia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 656)" className="Indonesia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 656)" className="Indonesia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 656)" className="Indonesia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 672)" className="Peru" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 672)" className="Peru" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 672)" className="Peru" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 672)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 672)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 672)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 672)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 672)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 672)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 672)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 672)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 672)" className="Republic of Congo" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 672)" className="Democratic Republic of Congo" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 672)" className="Democratic Republic of Congo" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 672)" className="Democratic Republic of Congo" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 672)" className="Tanzania" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 672)" className="Tanzania" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 672)" className="Tanzania" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 672)" className="Indonesia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 672)" className="Indonesia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 672)" className="Indonesia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 672)" className="Indonesia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 688)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 688)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 688)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 688)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 688)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 688)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 688)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 688)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 688)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(528 688)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 688)" className="Angola" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 688)" className="Democratic Republic of Congo" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 688)" className="Democratic Republic of Congo" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 688)" className="Democratic Republic of Congo" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 688)" className="Democratic Republic of Congo" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 688)" className="Tanzania" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 688)" className="Tanzania" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 688)" className="Indonesia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 688)" className="Indonesia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 704)" className="Peru" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 704)" className="Peru" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 704)" className="Bolivia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 704)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 704)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 704)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 704)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 704)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 704)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 704)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 704)" className="Angola" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 704)" className="Angola" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 704)" className="Angola" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 704)" className="Zambia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 704)" className="Zambia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 704)" className="Malawi" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 704)" className="Mozambique" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 704)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 720)" className="Peru" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 720)" className="Bolivia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 720)" className="Bolivia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 720)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 720)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 720)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 720)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 720)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 720)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 720)" className="Angola" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 720)" className="Angola" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 720)" className="Zambia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 720)" className="Zambia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 720)" className="Zimbabwe" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 720)" className="Mozambique" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 720)" className="Mozambique" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 720)" className="Madagascar" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 720)" className="Madagascar" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 720)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 720)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1216 720)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 720)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1264 720)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 736)" className="Chile" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 736)" className="Bolivia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 736)" className="Paraguay" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 736)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 736)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 736)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 736)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 736)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 736)" className="Namibia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 736)" className="Namibia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 736)" className="Botswana" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 736)" className="Botswana" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 736)" className="Zimbabwe" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 736)" className="Mozambique" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 736)" className="Madagascar" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 736)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 736)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1216 736)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 736)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 736)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1264 736)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 752)" className="Chile" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 752)" className="Argentina" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 752)" className="Paraguay" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 752)" className="Paraguay" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 752)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 752)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 752)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 752)" className="Namibia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 752)" className="Namibia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 752)" className="Botswana" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 752)" className="Botswana" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 752)" className="South Africa" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 752)" className="Mozambique" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 752)" className="Madagascar" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 752)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 752)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 752)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 752)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1216 752)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 752)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 752)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1264 752)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1280 752)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 768)" className="Chile" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 768)" className="Argentina" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 768)" className="Argentina" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 768)" className="Paraguay" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 768)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 768)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 768)" className="Namibia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 768)" className="South Africa" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 768)" className="South Africa" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 768)" className="South Africa" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 768)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 768)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 768)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 768)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1216 768)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 768)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 768)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1264 768)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1280 768)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1296 768)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 784)" className="Argentina" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 784)" className="Argentina" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 784)" className="Argentina" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 784)" className="Uruguay" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 784)" className="Brazil" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 784)" className="South Africa" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 784)" className="South Africa" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 784)" className="South Africa" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 784)" className="South Africa" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 784)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 784)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 784)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 784)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1216 784)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 784)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 784)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1264 784)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1280 784)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1296 784)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 800)" className="Argentina" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 800)" className="Argentina" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 800)" className="Argentina" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 800)" className="Uruguay" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 800)" className="South Africa" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 800)" className="South Africa" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 800)" className="South Africa" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 800)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 800)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 800)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 800)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1264 800)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1280 800)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 816)" className="Chile" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 816)" className="Argentina" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 816)" className="Argentina" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 816)" className="Argentina" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 816)" className="Argentina" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 816)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1264 816)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1280 816)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1392 816)" className="New Zealand" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 832)" className="Chile" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 832)" className="Argentina" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 832)" className="Argentina" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1392 832)" className="New Zealand" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 848)" className="Chile" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 848)" className="Argentina" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 848)" className="Argentina" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1280 848)" className="Australia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1376 848)" className="New Zealand" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 864)" className="Chile" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 864)" className="Argentina" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1360 864)" className="New Zealand" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 880)" className="Chile" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 880)" className="Argentina" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 896)" className="Chile" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 912)" className="Chile" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 912)" className="Argentina" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(720 624)" className="Nigeria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(704 624)" className="Nigeria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(720 608)" className="Nigeria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(704 608)" className="Nigeria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 624)" className="Cameroon" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 608)" className="Chad" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 608)" className="Nigeria" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 608)" className="Sudan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 608)" className="Sudan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 592)" className="Sudan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 592)" className="Sudan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 592)" className="Sudan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 576)" className="Sudan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 576)" className="Sudan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 576)" className="Sudan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 608)" className="Sudan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 608)" className="Ethiopia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 592)" className="Eritrea" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 576)" className="Saudi Arabia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 560)" className="Myanmar" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 544)" className="Myanmar" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 576)" className="Myanmar" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 576)" className="Thailand" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 560)" className="Taiwan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 448)" className="Mongolia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1264 688)" className="Papua New Guinea" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1264 672)" className="Papua New Guinea" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1328 688)" className="Solomon Islands" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 688)" className="Peru" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1296 672)" className="Papua New Guinea" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1216 512)" className="Japan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 496)" className="Japan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 480)" className="Japan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1264 464)" className="Japan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 464)" className="Japan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 496)" className="Japan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 496)" className="South Korea" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 576)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 560)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 560)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 560)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 544)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 528)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 528)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 512)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 496)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 544)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 560)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 528)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 544)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 528)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 544)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 544)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 528)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 528)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 528)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 496)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 448)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 528)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 528)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 528)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 512)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 512)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 512)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 512)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 512)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 512)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 512)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 512)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 512)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 512)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 496)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 496)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 560)" className="Mexico" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 496)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 496)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 496)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 496)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 496)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 496)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 496)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 496)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 480)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 480)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 480)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 480)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 480)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 480)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 480)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 480)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 480)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 480)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 480)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 464)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 464)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 464)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 464)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 464)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 464)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 464)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 464)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 464)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1216 448)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 448)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 544)" className="Mexico" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 448)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 448)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 448)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 448)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 432)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 432)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 432)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 432)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 416)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 416)" className="China" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 592)" className="Mexico" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 608)" className="India" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 592)" className="India" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 576)" className="India" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 576)" className="India" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 576)" className="India" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(976 576)" className="India" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 560)" className="India" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 560)" className="India" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 560)" className="India" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 560)" className="India" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 560)" className="India" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(976 560)" className="India" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 560)" className="India" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 544)" className="India" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 544)" className="India" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 544)" className="India" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 544)" className="India" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 528)" className="India" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 512)" className="India" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(976 544)" className="India" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 608)" className="Cambodia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 592)" className="Thailand" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 576)" className="Vietnam" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 560)" className="Vietnam" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 560)" className="Mexico" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 544)" className="Nepal" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 528)" className="Nepal" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 528)" className="Mexico" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 560)" className="Libya" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 560)" className="Libya" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 544)" className="Libya" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 544)" className="Libya" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 544)" className="Libya" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(720 544)" className="Libya" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 528)" className="Libya" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(752 528)" className="Libya" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 528)" className="Libya" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(720 528)" className="Libya" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 560)" className="Egypt" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(768 560)" className="Libya" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 544)" className="Egypt" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(784 528)" className="Egypt" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(624 544)" className="Western Sahara" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(640 528)" className="Morocco" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(656 512)" className="Morocco" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 480)" className="North Korea" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(640 464)" className="Spain" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 496)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(192 496)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(176 464)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 544)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 528)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 528)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 528)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 528)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 528)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 512)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 512)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 512)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 512)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 512)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 512)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 512)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 512)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 512)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 512)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 496)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 496)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 496)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 496)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 496)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 496)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 496)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 496)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 496)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 496)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(176 480)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 480)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(656 496)" className="Spain" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 480)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 480)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 480)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 480)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 480)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 480)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 480)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 480)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 480)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 480)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(192 480)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 464)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(656 480)" className="Spain" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 464)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 464)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 464)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 464)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 464)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 464)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 464)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 464)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 464)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 464)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(192 464)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 448)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 448)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 448)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 448)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 448)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 448)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 448)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 448)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 448)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 448)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(192 448)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(176 448)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 432)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 432)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 432)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 432)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 432)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 432)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 432)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(192 432)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(144 384)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(48 368)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(128 352)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(112 352)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(64 352)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(48 352)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(32 352)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(96 336)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(80 336)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(64 336)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(48 336)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(32 336)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(16 336)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(96 320)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(80 320)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(64 320)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(48 320)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(32 320)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(96 304)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(80 304)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(64 304)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(48 304)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(32 304)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(16 304)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(0 304)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(96 288)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(80 288)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(64 288)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(48 288)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(32 288)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(16 288)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(96 272)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(80 272)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(64 272)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(48 272)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(32 272)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(16 272)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(0 272)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(96 256)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(80 256)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(64 256)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(48 256)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(32 256)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(16 256)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(48 240)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 576)" className="Mexico" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(640 400)" className="Ireland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(656 384)" className="United Kingdom" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(48 576)" className="United States" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 224)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 208)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 192)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 176)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 160)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 144)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 128)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 112)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 96)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 80)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 64)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 48)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 32)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 16)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(512 0)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 464)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 448)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 432)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(160 384)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(144 368)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(176 352)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(144 352)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(112 320)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(112 304)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(112 288)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(112 272)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(144 256)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(176 240)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 224)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 448)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 448)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 448)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 448)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 432)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 432)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 432)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 432)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 432)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 416)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(672 432)" className="France" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 416)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 416)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 416)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 416)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 416)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 416)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 416)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 416)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 416)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 416)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 416)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 416)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 416)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 416)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 416)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(192 416)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(176 416)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(160 416)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(448 400)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 400)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 400)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 400)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 400)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 400)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 400)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 400)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 400)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 400)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 400)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 400)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 400)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 400)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 400)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(192 400)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(176 400)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(160 400)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 384)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 384)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 384)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 384)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 384)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 384)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 384)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 384)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 384)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 384)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 384)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 384)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 384)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(192 384)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(176 384)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 368)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(672 416)" className="United Kingdom" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 368)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 368)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 368)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 368)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 368)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 368)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 368)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 368)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 368)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(192 368)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(176 368)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(160 368)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 352)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(656 368)" className="United Kingdom" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 352)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 352)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 352)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 352)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 352)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 352)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 352)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 352)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(192 352)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(160 352)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(112 336)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 336)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(704 352)" className="Norway" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 336)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 336)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 336)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 336)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 336)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 336)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 336)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 336)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(192 336)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(176 336)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(160 336)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(144 336)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(128 336)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 320)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 336)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 320)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 320)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 320)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 320)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 320)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 320)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 320)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 320)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(192 320)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(176 320)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(160 320)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(144 320)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(128 320)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 304)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 320)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 304)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 304)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 304)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 304)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 304)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 304)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 304)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 304)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 304)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 304)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 304)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 304)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(192 304)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(176 304)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(160 304)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(144 304)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(128 304)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 288)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 304)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 288)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 288)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 288)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 288)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 288)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 288)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 288)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 288)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 288)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 288)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 288)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(192 288)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(176 288)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(160 288)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(144 288)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(128 288)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 272)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 288)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 272)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 272)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 272)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 272)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 272)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 272)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(192 272)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(176 272)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(160 272)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(144 272)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(128 272)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 256)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 272)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 256)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 256)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 256)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 256)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 256)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 256)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 256)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 256)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(160 256)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 240)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 256)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 240)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 240)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 240)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 240)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 240)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 240)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 240)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 240)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 224)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 240)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 224)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 224)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 224)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 224)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 224)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(192 224)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(176 224)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 208)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 208)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 208)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 208)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 208)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 208)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 208)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(192 208)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(176 208)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 192)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 192)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 192)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 176)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 176)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 176)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 176)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(240 176)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(224 176)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(208 176)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 160)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 160)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 160)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 160)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 160)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 160)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(192 160)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 144)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 144)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 144)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(192 144)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 128)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 128)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 128)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 128)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(272 128)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 112)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 112)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 112)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 112)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 112)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(256 112)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 96)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 96)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 96)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 96)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 96)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 96)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 96)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 80)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 80)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 80)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 80)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(288 80)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 64)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 64)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 64)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 64)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 64)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 64)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(304 64)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 48)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 48)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 48)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 48)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 48)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 48)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 32)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 32)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 32)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 32)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 32)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(336 32)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(320 32)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 16)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 16)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 16)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 16)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(352 16)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(384 0)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(368 0)" className="Canada" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(688 448)" className="France" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 464)" className="Mongolia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 448)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(704 448)" className="France" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1280 688)" className="Papua New Guinea" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(688 432)" className="France" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 416)" className="Mongolia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(944 416)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 416)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(688 416)" className="France" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(944 400)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(672 400)" className="United Kingdom" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(736 384)" className="Sweden" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(720 368)" className="Denmark" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(720 352)" className="Norway" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 336)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 320)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(496 304)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 272)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 256)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 240)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 224)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 208)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 192)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(464 176)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 160)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 144)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(400 128)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(416 112)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 96)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(432 80)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 464)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 416)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 448)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 448)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 448)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 448)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 432)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 432)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1216 432)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 432)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 432)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 416)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 416)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1216 416)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 416)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 432)" className="Kazakhstan" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 416)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 416)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 416)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 416)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 416)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 416)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 416)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(928 416)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 416)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 416)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 416)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1328 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1312 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1216 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(928 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 400)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1328 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1312 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1216 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(976 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(944 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(928 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 384)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1328 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1216 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(976 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(944 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(928 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 368)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1344 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1296 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1280 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1264 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1216 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(976 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(944 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(928 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 352)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1376 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1360 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1328 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1312 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1296 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1280 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1264 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1216 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(976 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(944 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(928 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 336)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1392 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1376 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1360 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1344 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1328 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1312 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1296 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1280 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1264 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1216 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(976 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(944 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(928 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 320)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1440 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1408 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1392 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1376 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1360 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1344 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1328 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1312 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1296 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1280 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1264 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1216 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(976 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(944 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(928 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(848 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 304)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1440 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1424 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1408 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1392 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1376 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1360 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1344 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1328 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1312 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1296 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1280 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1264 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1216 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(480 288)" className="Greenland" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(944 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(928 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 288)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1408 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1392 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1376 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1360 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1344 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1328 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1312 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1296 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1280 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1264 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1216 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(976 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(944 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(928 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(864 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(832 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(816 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(800 272)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1392 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1376 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1328 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1312 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1296 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1280 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1264 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1216 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(928 256)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1408 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1296 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1280 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1264 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1232 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1216 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(992 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 240)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1280 224)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1264 224)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 224)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1200 224)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 224)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1168 224)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 224)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 224)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 224)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 224)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 224)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 224)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 224)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 224)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 224)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 224)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(960 224)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 224)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 208)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1184 208)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1152 208)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 208)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 208)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 208)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 208)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 208)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 208)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 208)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1024 208)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1008 208)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 192)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 192)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 192)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 192)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 192)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1040 192)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 192)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1264 176)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1248 176)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1136 176)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 176)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 176)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 176)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 176)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 176)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(928 176)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(912 176)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1120 160)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 160)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 160)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(944 160)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1104 144)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 128)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1088 112)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 112)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 96)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 96)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 80)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1056 80)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(880 80)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(1072 64)" className="Russia" />
+            <rect width="15" height="15" rx="1.5" ry="1.5" transform="translate(896 464)" className="Kazakhstan" />
           </g>
         </svg>
       </div>

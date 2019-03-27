@@ -1,14 +1,9 @@
 .app-template {
   height: 100vh;
-  background-color: #0070c6;
+  background-color: #2b4ea8;
 }
 
-.testFrame1 {
-  float: left;
-  width: 50%;
-}
-
-.testFrame2 {
+.mainFrame {
   width: 90%;
   height: 90%;
   margin: auto;
